@@ -1,0 +1,10 @@
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+}
+
+body header img {
+     margin: 45px 0 45px 0;}
