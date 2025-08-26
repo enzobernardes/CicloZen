@@ -6,7 +6,7 @@ html, body {
   box-sizing: border-box; 
 }
 
-/* Banner (topo) */
+/* Banner */
 header {
   width: 100%;
   height: 20vh;
@@ -17,7 +17,7 @@ header {
 
 /* Menu */
 header nav {
-  margin-left: auto; /* joga o menu pra direita */
+  margin-left: auto;
 }
 
 header nav ul {
@@ -48,17 +48,17 @@ main {
   align-items: center;
   justify-content: center;
   color: white;
-  overflow: hidden; /* impede a imagem de sair do main */
+  overflow: hidden;
 }
 
-main .banner-img {
+main img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* faz a img se comportar como background-size: cover */
-  z-index: -1; /* joga a imagem para trás do texto */
+  object-fit: cover;
+  z-index: -1;
 }
 
 main h1 {
