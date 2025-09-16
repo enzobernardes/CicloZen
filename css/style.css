@@ -90,18 +90,23 @@ main section.banner1 p {
 }
 
 main section.banner2 {
-  max-height: 589px;
-  padding: 20vh 0 40vh 5vw;
-  margin: 4vw 3vw 4vw 5.8vw;
-  background: url(../images/image\ 3.png);
-  width: 1580px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px gray;
+  padding: 5vh 5vw 40vh 5vw;
+  margin: -4vw 0vw 0 0vw;
+  width: 100%;
+  border-radius: 20px;  
+  background-color: white;
 }
 
 main section.banner2 div {
-  margin: 0 0 0vw 45vw;
+  margin: 0 0 0vw 0vw;
   font-size: 1.1rem;
+  width: 100%;
+  max-height: 589px;
+  background: url(../images/image\ 3.png);
+  box-shadow: 0px 0px 10px gray;
+  padding: 3vw 3vw 29vw 45vw;
+  box-sizing: border-box;
+  border-radius: 20px;
 
 }
 
@@ -116,9 +121,42 @@ main section.banner2 div h3 {
   font-size: 1.2rem;
 }
 
-main section.banner2 div ul li {
-  list-style: disc;
-  font-weight: 500;
-  margin: 0 0 0 1vw;
+main section.banner2 div ul{
+  padding: 0 0 0 1vw;
+  
+}
 
+main section.banner2 div ul{
+  padding: 0 0 0 1vw;
+}
+
+main section.banner3{
+  padding: 30vh 5vw 30vh 5vw;
+  margin: 10vw 0vw 0 0vw;
+  width: 100%;
+  border-radius: 20px;  
+  background-color: white;
+  display: flex;
+  font-size: 1.1rem;
+  max-height: 589px;
+  box-shadow: 0px 0px 10px gray;
+  padding: 3vw 3vw 20vw 4vw;
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: #011839;
+}
+
+main section.banner3 div h2{
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+main section.banner3 div h3 {
+  font-weight: bold;
+  margin: 1.6vw 0 1.4vw 0;
+  font-size: 1.2rem;
+}
+
+main section.banner2 div ul{
+  padding: 0 0 0 1vw;
 }
