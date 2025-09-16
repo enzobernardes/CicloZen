@@ -1,55 +1,59 @@
-a{
+a {
   text-decoration: none;
-  color: white;
+  color: #011839;
 }
 
 
-html, body { 
-  margin: 0; 
+html,
+body {
+  margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-* { 
-  box-sizing: border-box; 
+* {
+  box-sizing: border-box;
 }
 
 /* Banner */
 header {
-  width: 100%;
-  height: 12vh;
-  background: #011839 url(../images/Ciclozen.png) left center/contain no-repeat;
+  padding: 1vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 0 2vw;
+}
+
+/* Menu */
+header h1 {
+  color: #011839;
+  font-weight: 900;
+  font-size: 1.7rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 0 0 0 4vw;
+}
+
+header h1 a {
   display: flex;
   align-items: center;
 }
 
-/* Menu */
-header h1{
-  color: white;
-  font-weight: bold;
-  font-size: 2rem;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding: 0 0 0 12vw;
-}
-
-header nav {
-  margin-left: auto;
+header h1 a img {
+  margin: 0 2vw 0 0;
 }
 
 header nav ul {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+
 }
 
 header nav ul li {
-  margin: 0 20px;
+  margin: 0 2vw;
 }
 
 header nav ul li a {
   text-decoration: none;
-  color: white;
+  color: #011839;
   font-weight: bold;
   font-size: 1rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -59,33 +63,62 @@ header nav ul li a {
 main {
   position: relative;
   width: 100%;
-  height: 80vh;
-  display: flex;
-  align-items: center;
   color: white;
   overflow: hidden;
 }
 
-main img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-main section.banner1{
-  padding: 0 0 0 10vw;
-
+main section.banner1 {
+  padding: 20vh 0 50vh 5vw;
+  color: #011839;
+  background: url(../images/image\ 2.png);
+  max-height: 1150px;
 }
 
-main section.banner1 h2{
+main section.banner1 h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 3rem;
-}
-main section.banner1 p{
-  font-size: 1.5rem;
-}
-main section
+  font-size: 7rem;
+  padding: 0vw 0 0vw 0;
+  font-weight: bold;
 
+}
+
+main section.banner1 p {
+  font-size: 1.5rem;
+  color: #5274A5;
+  padding: 0 0 10vw 1vw;
+  font-weight: bold;
+}
+
+main section.banner2 {
+  max-height: 589px;
+  padding: 20vh 0 40vh 5vw;
+  margin: 4vw 3vw 4vw 5.8vw;
+  background: url(../images/image\ 3.png);
+  width: 1580px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px gray;
+}
+
+main section.banner2 div {
+  margin: 0 0 0vw 45vw;
+  font-size: 1.1rem;
+
+}
+
+main section.banner2 div h2 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+main section.banner2 div h3 {
+  font-weight: bold;
+  margin: 1.6vw 0 1.4vw 0;
+  font-size: 1.2rem;
+}
+
+main section.banner2 div ul li {
+  list-style: disc;
+  font-weight: 500;
+  margin: 0 0 0 1vw;
+
+}
