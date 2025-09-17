@@ -131,32 +131,21 @@ main section.banner2 div ul{
 }
 
 main section.banner3{
-  padding: 30vh 5vw 30vh 5vw;
-  margin: 10vw 0vw 0 0vw;
-  width: 100%;
-  border-radius: 20px;  
-  background-color: white;
-  display: flex;
-  font-size: 1.1rem;
-  max-height: 589px;
-  box-shadow: 0px 0px 10px gray;
-  padding: 3vw 3vw 20vw 4vw;
-  box-sizing: border-box;
-  border-radius: 20px;
   color: #011839;
+  display: flex;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px gray;
+  margin: 0 3vw 0 3.109vw;
+  border-radius: 20px;
+  border-color: black;
 }
 
-main section.banner3 div h2{
+main section.banner3 div.image img{
+ 
+}
+
+main section.banner3 h2{
   font-size: 3rem;
   font-weight: bolder;
-}
-
-main section.banner3 div h3 {
-  font-weight: bold;
-  margin: 1.6vw 0 1.4vw 0;
-  font-size: 1.2rem;
-}
-
-main section.banner2 div ul{
-  padding: 0 0 0 1vw;
+  padding: 3vw 0 0 2vw;
 }
