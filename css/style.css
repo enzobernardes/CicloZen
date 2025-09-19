@@ -4,10 +4,7 @@ a {
 }
 
 
-html,
-body {
-  margin: 0;
-  padding: 0;
+html body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -44,7 +41,6 @@ header h1 a img {
 
 header nav ul {
   display: flex;
-
 }
 
 header nav ul li {
@@ -59,12 +55,16 @@ header nav ul li a {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+header nav ul li a.home {
+  text-decoration: underline;
+}
+
 /* Main */
+
 main {
   position: relative;
   width: 100%;
   color: white;
-  overflow: hidden;
 }
 
 main section.banner1 {
@@ -93,7 +93,7 @@ main section.banner2 {
   padding: 5vh 5vw 40vh 5vw;
   margin: -4vw 0vw 0 0vw;
   width: 100%;
-  border-radius: 20px;  
+  border-radius: 20px;
   background-color: white;
 }
 
@@ -121,16 +121,15 @@ main section.banner2 div h3 {
   font-size: 1.2rem;
 }
 
-main section.banner2 div ul{
-  padding: 0 0 0 1vw;
-  
-}
-
-main section.banner2 div ul{
+main section.banner2 div ul {
   padding: 0 0 0 1vw;
 }
 
-main section.banner3{
+main section.banner2 div ul li {
+  list-style: disc;
+}
+
+main section.banner3 {
   color: #011839;
   display: flex;
   margin: 0 auto;
@@ -140,7 +139,7 @@ main section.banner3{
   border-color: black;
 }
 
-main section.banner3 h2{
+main section.banner3 h2 {
   font-size: 3rem;
   font-weight: bolder;
   padding: 3vw 0 0 2vw;

@@ -49,6 +49,7 @@ header nav ul {
 
 header nav ul li {
   margin: 0 2vw;
+  list-style-type: none;
 }
 
 header nav ul li a {
@@ -57,6 +58,10 @@ header nav ul li a {
   font-weight: bold;
   font-size: 1rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header nav ul li a.presono {
+  text-decoration: underline;
 }
 
 /* Main */
