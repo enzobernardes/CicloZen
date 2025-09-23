@@ -58,3 +58,19 @@ header nav ul li a {
 header nav ul li a.sono {
   text-decoration: underline;
 }
+
+/*banners*/
+
+main section.banner1 {
+  background: url(../images/image\ 6.png);
+  color: white;
+}
+main section.banner1 h1{
+  font-size: 6rem;
+  font-weight: bold;
+}
+main section.banner1 p{
+  text-align: right;
+  text-decoration: ;
+  padding: 40px 80px 100px 200px;
+}
