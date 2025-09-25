@@ -144,3 +144,27 @@ main section.banner3 h2 {
   font-weight: bolder;
   padding: 3vw 0 0 2vw;
 }
+
+/*Footer*/
+
+footer{
+  text-align: center;
+  padding: 10vw;
+  color: white;
+  background: linear-gradient(to top, #112C54, #497FCF);
+} 
+footer div{
+  display: flex;
+  padding: 0vw 0vw 0vw 30vw;
+  align-items: center;
+}
+
+footer div img{
+  padding: 0 1vw 0vw 0;
+  margin: 0 0 10vw 0;
+}
+
+footer div h2{
+  padding: 0 0 0vw 0;
+  margin: 0 0 10vw 0;
+}
