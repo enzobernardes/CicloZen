@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: #02193B;
+    font-family: Inter;
+}
+
+header {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.04vh 2.6vw;
+    background-color: white;
+    width: 100%;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.52vw;
+}
+
+header .logo img {
+    width: 2.08vw;
+}
+
+header .logo p {
+    font-size: 1.25vw;
+    font-weight: 800;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.56vw;
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 1.04vw;
+}
+
+nav ul li a:hover {
+    text-decoration: underline 0.104vw;
+}
+
+nav ul li a.active {
+    text-decoration: underline 0.104vw;
+}
+
+.section1 {
+    margin-top: 0.03rem;
+
+    position: relative;
+    height: 100vh;
+    background-image: url('img/sono-hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1.04vh;
+}
+
+.section1 h1 {
+    font-weight: 800;
+    font-style: Extra Bold;
+    font-size: 6rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: white;
+
+}
+
+.section1 p {
+
+    font-weight: 800;
+    font-style: Extra Bold;
+    font-size: 1.2rem;
+    width: 12%;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    color: white;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4vw;
+    gap: 4vw;
+    background-color: white;
+}
+
+.beneficios {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 2vw;
+    padding: 4vh 4vw;
+    padding-left: 15%;
+    width: 95%;
+    box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.3);
+    gap: 2vw;
+    overflow: visible;
+    /* astronauta pode "sair" da div */
+}
+
+.astronauta {
+    position: absolute;
+    left: -5vw;
+    /* joga para fora da div */
+    /* deixa a parte de baixo "saindo" */
+    width: 18vw;
+    /* tamanho proporcional à largura da tela */
+    height: auto;
+    /* mantém proporção da imagem */
+    filter: drop-shadow(0.5vw 0.8vh 1.5vh rgba(0, 0, 0, 0.3));
+}
+
+.beneficios img {
+    width: 25vw;
+    flex-shrink: 0;
+}
+
+.texto {
+    max-width: 60%;
+}
+
+.texto h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.section2 .fases {
+    background-image: url('img/fasesdosono.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 95%;
+    height: 80vh;
+    background-position: 70% 5%;
+    /* define a parte visível */
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.45);
+}
+
+.section2 .fases h1 {
+
+    font-weight: 900;
+    font-style: Black;
+    font-size: 4rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: white;
+}
+
+.section2 .fases ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.section2 .fases ul li {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+
+.fases ul li h2 {
+    color: white;
+    font-weight: 900;
+    font-style: Black;
+    font-size: 8rem;
+
+
+    letter-spacing: 0%;
+
+}
+
+.fases ul li p {
+    font-weight: 900;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.5;
+
+}
+
+.section2 .privacao {
+    width: 95%;
+    height: 46.3vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 0.83vw;
+    border: #02193B 0.052vw solid;
+    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.45);
+}
+
+.privacao .left {
+    padding: 2vw;
+}
+
+.left h1 {
+
+    font-weight: 900;
+    font-style: Black;
+    font-size: 3.33vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 4vh;
+}
+
+.left p {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 1.5vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: justify;
+    margin-bottom: 4vh;
+}
+
+.left ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin-left: 1.04vw;
+}
+
+.left ul li {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 1.2vw;
+}
+
+.privacao .right img {
+    height: 46.3vh;
+    width: auto;
+}
+
+.bonshabitos {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+
+.bonshabitos h1 {
+    font-weight: 900;
+    font-size: 3vw;
+    margin-bottom: 2.5rem;
+}
+
+.bonshabitos ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8vw;
+}
+
+.bonshabitos ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vh;
+    font-weight: 800;
+    font-style: Extra Bold;
+}
+
+.bonshabitos ul li img {
+    height: 8vw;
+    width: 8vw;
+    margin-bottom: 1.5vh;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    background: linear-gradient(to bottom, #497FCF, #112C54);
+    padding: 2rem;
+
+}
+
+footer .left-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+
+.left-footer p {
+    color: white;
+}
+
+.right-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.right-footer h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.right-footer ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.right-footer ul li a {
+    color: white;
+    text-decoration: underline;
+}

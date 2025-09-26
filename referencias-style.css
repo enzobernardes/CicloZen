@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: #02193B;
+    font-family: Inter;
+}
+
+header {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.04vh 2.6vw;
+    background-color: white;
+    width: 100%;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.52vw;
+}
+
+header .logo img {
+    width: 2.08vw;
+}
+
+header .logo p {
+    font-size: 1.25vw;
+    font-weight: 800;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.56vw;
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 1.04vw;
+}
+
+nav ul li a:hover {
+    text-decoration: underline 0.104vw;
+}
+
+.section1 {
+    margin-top: 0.03rem;
+    position: relative;
+    height: 100vh;
+    background-image: url('img/hero1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5.21vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.04vh;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    background: linear-gradient(to bottom, #497FCF, #112C54);
+    padding: 2rem;
+
+}
+
+footer .left-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+
+.left-footer p {
+    color: white;
+}
+
+.right-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.right-footer h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.right-footer ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.right-footer ul li a {
+    color: white;
+    text-decoration: underline;
+}

@@ -1,43 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciclo zen</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/sono.css">
-</head>
-
-<body>
-    <header>
-        <h1><a href="index.html"> <img src="images/logo.png" alt=""> CicloZen</a></h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sono.html" class="sono">Sono</a></li>
-                <li><a href="preSono.html">Pré-sono</a></li>
-                <li><a href="habitos.html">Hábitos</a></li>
-                <li><a href="sobreNos.html">Sobre Nós</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="banner1">
-            <h1>Sono</h1>
-            <p>Seu sono define a sua qualidade de vida cuide-se</p>
-        </section>  
-
-        <section>
-            <div>
-                <h2>Benefícios do Sono de Qualidade</h2>
-                <p>O sono de qualidade fortalece o sistema imunológico, regula hormônios importantes, consolida a memória e
-                restaura o corpo. Além disso, protege contra doenças crônicas como hipertensão, diabetes e problemas
-                cardiovasculares, garantindo disposição física e equilíbrio emocional.</p>
-            </div>
-        </section>
-    </main>
-</body>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CicloZen</title>
+    <link rel="stylesheet" href="sono-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="logo" />
+      <p>CicloZen</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sono.html" class="active">Sono</a></li>
+        <li><a href="presono.html">Pré-sono</a></li>
+        <li><a href="habitos.html">Hábitos</a></li>
+        <li><a href="sobrenos.html">Sobre nós</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <section class="section1">
+      <h1>Sono</h1>
+      <p>Seu sono define sua qualidade de vida, cuide-se</p>
+    </section>
+    <section class="section2">
+      <div class="beneficios">
+        <img
+          src="img/benefícios.png"
+          alt="Astronauta Dormindo"
+          class="astronauta"
+        />
+        <div class="texto">
+          <h2>Benefícios do Sono de Qualidade</h2>
+          <p>
+            O sono de qualidade fortalece o sistema imunológico, regula
+            hormônios importantes, consolida a memória e restaura o corpo. Além
+            disso, protege contra doenças crônicas como hipertensão, diabetes e
+            problemas cardiovasculares, garantindo disposição física e
+            equilíbrio emocional.
+          </p>
+        </div>
+      </div>
+      <div class="fases">
+        <h1>Fases do sono</h1>
+        <ul>
+          <li>
+            <h2>1.</h2>
+            <p>
+              NREM (leve): corpo começa a relaxar, batimentos e respiração
+              diminuem.
+            </p>
+          </li>
+          <li>
+            <h2>2.</h2>
+            <p>Sono profundo: restauração física e liberação de hormônios.</p>
+          </li>
+          <li>
+            <h2>3.</h2>
+            <p>
+              REM (movimento rápido dos olhos): atividade cerebral intensa,
+              sonhos e fixação da memória.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="privacao">
+        <div class="left">
+          <h1>Consequências da privação do sono:</h1>
+          <ul>
+            <li>Diminuição da imunidade</li>
+            <li>Problemas de memória e aprendizado</li>
+            <li>Alterações de humor, estresse e depressão</li>
+            <li>Aumento do risco de doenças cardíacas, obesidade e diabetes</li>
+            <li>Redução da expectativa de vida</li>
+          </ul>
+        </div>
+        <div class="right">
+          <img src="img/presono.png" alt="presono" />
+        </div>
+      </div>
+       <div class="bonshabitos">
+        <h1>Dormir é uma necessidade biológica universal</h1>
+        <ul>
+          <li>
+            <img src="img/Vector.png" alt="" />
+            <p>Restauro físico</p>
+          </li>
+          <li>
+            <img src="img/Vector-1.png" alt="" />
+            <p>Equilíbrio Hormonal</p>
+          </li>
+          <li>
+            <img src="img/Vector-2.png" alt="" />
+            <p>Saúde mental</p>
+          </li>
+          <li>
+            <img src="img/Vector-3.png" alt="" />
+            <p>Imunidade</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+    <footer>
+      
+      <div class="right-footer">
+        <h2>Redes Sociais:</h2>
+        <ul>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">X</a></li>
+          <li><a href="">Github</a></li>
+        </ul>
+      </div>
+      <div class="left-footer">
+        <img src="img/logo.png" alt="logo">
+        <p>CicloZen © Todos os direitos reservados. </p>
+      </div>
+  </footer>
 </html>
