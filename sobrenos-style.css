@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: #02193B;
+    font-family: Inter;
+}
+
+header {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.04vh 2.6vw;
+    background-color: white;
+    width: 100%;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.52vw;
+}
+
+header .logo img {
+    width: 2.08vw;
+}
+
+header .logo p {
+    font-size: 1.25vw;
+    font-weight: 800;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.56vw;
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 1.04vw;
+}
+
+nav ul li a:hover {
+    text-decoration: underline 0.104vw;
+}
+
+nav ul li a.active {
+    text-decoration: underline 0.104vw;
+}
+
+.section1 {
+    margin-top: 0.03rem;
+
+    position: relative;
+    height: 100vh;
+    background-image: url('img/hero-sobrenos.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 6vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.04vh;
+}
+
+.section1 h1 {
+    font-weight: 800;
+    font-style: Extra Bold;
+    font-size: 6rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: white;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4vw;
+    gap: 4vw;
+    background-color: white;
+}
+
+.acreditamos {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.acreditamos h1 {
+    font-weight: 900;
+    font-style: Black;
+    font-size: 3em;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 0.5em;
+}
+
+.acreditamos p {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 1.5em;
+    line-height: 1.2;
+    letter-spacing: 0%;
+    text-align: justify;
+
+}
+
+.acreditamos img {
+    width: 7em;
+    margin-top: 3rem;
+}
+
+.membros {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+.membros h1{
+font-weight: 900;
+font-size: 3rem;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.membros ul {
+    display: flex;
+    gap: 5rem;
+    list-style: none;
+
+}
+
+.membros ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.membros ul li img {
+    border-radius: 50%;
+    width: 10rem;
+    height:10rem;
+}
+
+.membros ul li p {
+    font-weight: 800;
+    font-style: Extra Bold;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: justify;
+    color: #02193B;
+
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    background: linear-gradient(to bottom, #497FCF, #112C54);
+    padding: 2rem;
+
+}
+
+footer .left-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+
+.left-footer p {
+    color: white;
+}
+
+.right-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.right-footer h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.right-footer ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.right-footer ul li a {
+    color: white;
+    text-decoration: underline;
+}

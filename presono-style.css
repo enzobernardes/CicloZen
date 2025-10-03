@@ -1,41 +1,320 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    list-style: none;
+    scroll-behavior: smooth;
     text-decoration: none;
     color: #02193B;
+    font-family: Inter;
 }
-header{
+
+header {
+    position: fixed;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: Inter;
-    padding:20px 50px ;
+    padding: 1.04vh 2.6vw;
+    background-color: white;
+    width: 100%;
 }
-header .logo{
+
+header .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 0.52vw;
 }
-header .logo img{
-    width: 40px;
+
+header .logo img {
+    width: 2.08vw;
 }
-header .logo p{
-    font-size: 24px;
+
+header .logo p {
+    font-size: 1.25vw;
     font-weight: 800;
 }
-nav ul{
+
+nav ul {
     display: flex;
-    gap: 30px;
+    gap: 1.56vw;
+    list-style: none;
 }
-nav ul li a{
-    font-size: 20px;
+
+nav ul li a {
+    font-size: 1.04vw;
 }
-nav ul li a:hover{
-    text-decoration: underline 2px;
+
+nav ul li a:hover {
+    text-decoration: underline 0.104vw;
 }
-nav ul li a.active{
-    text-decoration: underline 2px;
+
+nav ul li a.active {
+    text-decoration: underline 0.104vw;
+}
+
+.section1 {
+    margin-top: 0.03rem;
+    position: relative;
+    height: 100vh;
+    background-image: url('img/cama.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.04vh;
+}
+
+.section1 .container {
+    margin-bottom: 10rem;
+}
+
+.section1 h1 {
+    font-weight: 800;
+    font-style: Extra Bold;
+    font-size: 6rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: white;
+
+}
+
+.section1 p {
+    font-weight: 800;
+    font-style: Extra Bold;
+    font-size: 1.2rem;
+    width: 12%;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: white;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4vw;
+    gap: 4vw;
+    background-color: white;
+}
+
+.ritual-presono {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 2vw;
+    padding: 4vh 4vw;
+    padding-left: 15%;
+    width: 95%;
+    box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.3);
+    gap: 2vw;
+    overflow: visible;
+    min-height: 25vh;
+    /* astronauta pode "sair" da div */
+}
+
+.ritual {
+    position: absolute;
+    left: -3vw;
+    top: -18vh;
+    width: 18vw;
+    height: auto;
+    filter: drop-shadow(0.5vw 0.8vh 1.5vh rgba(0, 0, 0, 0.3));
+}
+
+.ritual-presono img {
+    width: 32vw;
+    flex-shrink: 0;
+}
+
+.texto {
+    max-width: 60%;
+}
+
+.texto h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.texto p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.section2 .privacao {
+    width: 95%;
+    height: 46.3vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 0.83vw;
+    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    position: relative;
+}
+
+.privacao .left {
+    padding: 3em;
+}
+
+.left h1 {
+
+    font-weight: 900;
+    font-size: 3.33vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 4vh;
+}
+
+.left p {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 1vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: justify;
+    margin-bottom: 4vh;
+}
+
+.left ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin-left: 1.04vw;
+}
+
+.left ul li {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 1.1vw;
+}
+
+.privacao .right {
+    width: 50%;
+    /* ocupa metade da div .privacao */
+    height: 100%;
+    /* ocupa toda a altura da div */
+    overflow: hidden;
+    /* esconde partes que ultrapassarem */
+}
+
+.privacao .right img {
+    width: 100%;
+    /* cobre toda a largura da .right */
+    height: 100%;
+    /* cobre toda a altura da .right */
+    object-fit: cover;
+    /* mantém proporção e cobre a div */
+    object-position: center;
+    /* foca no centro da imagem */
+}
+
+.comidas {
+
+    width: 95%;
+    height: 100vh;
+    background-image: url('img/comida.png');
+    background-position: 5% 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1vw;
+    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: end;
+    padding: 10em;
+}
+
+.note {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    background: #FFD54F;
+    padding: 5rem;
+    width: 40%;
+    height: 70%;
+    border: 0.2vh solid #ccc;
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.2);
+
+    /* recorte proporcional ao tamanho do canto (usando em) */
+    clip-path: polygon(0 0,
+            100% 0,
+            100% calc(100% - 2.5em),
+            calc(100% - 2.5em) 100%,
+            0 100%);
+}
+
+.note::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 2.5em;
+    /* mesmo valor em ambas as direções → quadrado perfeito */
+    height: 2.5em;
+    background: #BCA03E;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.note h3 {
+    font-weight: 900;
+    color: #545454;
+    font-size: 2rem;
+
+}
+.note ul li{
+    color: #545454;
+    margin-left: 0.7rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    background: linear-gradient(to bottom, #497FCF, #112C54);
+    padding: 2rem;
+
+}
+
+footer .left-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+
+.left-footer p {
+    color: white;
+}
+
+.right-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.right-footer h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.right-footer ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.right-footer ul li a {
+    color: white;
+    text-decoration: underline;
 }
