@@ -53,7 +53,7 @@ nav ul li a:hover {
     margin-top: 0.03rem;
     position: relative;
     height: 100vh;
-    background-image: url('img/hero1.png');
+    background-image: url('img/Gemini_Generated_Image_7igmav7igmav7igm.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -63,6 +63,86 @@ nav ul li a:hover {
     gap: 1.04vh;
 }
 
+.section1 h1 {
+    width: 50%;
+    padding-top: 5rem;
+    font-weight: 800;
+    font-style: Extra Bold;
+    font-size: 6.67vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.section1 p {
+    font-family: Inter;
+    font-weight: 800;
+    font-style: Extra Bold;
+    font-size: 1.25vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #5274A5;
+    width: 15%;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3vw;
+    gap: 2.6vh;
+    background-color: white;
+}
+
+.section2 .box {
+    width: 95%;
+    height: 46.3vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 0.26vh;
+    justify-content: center;
+    align-items: end;
+    border-radius: 1vw;
+    overflow: hidden;
+    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.45);
+}
+
+.box .div {
+    margin: 2.6vw 2.6vw;
+}
+
+.section2 .box h1 {
+    font-family: Inter;
+    font-weight: 900;
+    font-style: Black;
+    font-size: 3.33vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #02193B;
+    margin-bottom: 2vh;
+}
+
+.section2 .box p {
+    font-family: Inter;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 1.2vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: justify;
+    color: #02193B;
+    margin-bottom: 4vh;
+}
+
+.section2 .box ul li {
+    color: #02193B;
+    margin-bottom: 0.8vh;
+    font-weight: 500;
+    font-size: 1.04vw;
+}
 
 footer {
     display: flex;

@@ -114,10 +114,20 @@ nav ul li a.active {
 
 }
 
-.acreditamos img {
-    width: 7em;
-    margin-top: 3rem;
+.referencias p a {
+  background-color: #02193B;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.5s ease;
 }
+.referencias p a:hover{
+    background: #497FCF;
+} 
+
 
 .membros {
     padding: 3rem;
@@ -137,7 +147,6 @@ letter-spacing: 0%;
     display: flex;
     gap: 5rem;
     list-style: none;
-
 }
 
 .membros ul li {
