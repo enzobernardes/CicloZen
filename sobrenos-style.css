@@ -58,7 +58,8 @@ nav ul li a.active {
 
     position: relative;
     height: 100vh;
-    background-image: url('img/hero-sobrenos.png');
+    background-color: #112C54;
+    /*background-image: url('img/hero-sobrenos.png');*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
