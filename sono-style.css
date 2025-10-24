@@ -291,51 +291,42 @@ nav ul li a.active {
     font-weight: 800;
     font-style: Extra Bold;
 }
-
-.bonshabitos ul li img {
-    height: 8vw;
-    width: 8vw;
-    margin-bottom: 1.5vh;
-}
-
 footer {
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-    background: linear-gradient(to bottom, #497FCF, #112C54);
-    padding: 2rem;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, #497FCF, #112C54);
+  color: white;
+}
+.right-footer{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 2vw;
 }
 
-footer .left-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-
+.right-footer p {
+  color: white;
 }
 
-.left-footer p {
-    color: white;
+.left-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1vw 2vw;
 }
 
-.right-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+.left-footer h2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 30px;
 }
 
-.right-footer h2 {
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.right-footer ul {
-    list-style: none;
-    margin-bottom: 1rem;
-}
-
-.right-footer ul li a {
-    color: white;
-    text-decoration: underline;
+.left-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 25px;
 }

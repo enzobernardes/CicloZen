@@ -280,39 +280,43 @@ color: white;
     color: white;
     font-size: 1.2rem;
 }
-footer{
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-    background: linear-gradient(to bottom,#497FCF, #112C54 );
-    padding: 2rem;
-   
-}
-footer .left-footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    
-}
-.left-footer p{
-    color: white;
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, #497FCF, #112C54);
+  color: white;
 }
 .right-footer{
-    display: flex;
-    flex-direction: column; 
-    justify-content: end;
-}
-.right-footer h2{
-    color: white;
-    margin-bottom: 1rem;
-}
-.right-footer ul {
-    list-style: none;
-    margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 2vw;
 }
 
-.right-footer ul li a{
-    color: white;
-    text-decoration: underline;
+.right-footer p {
+  color: white;
+}
+
+.left-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  padding: 1vw 2vw;
+}
+
+.left-footer h2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 30px;
+}
+
+.left-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 25px;
 }
