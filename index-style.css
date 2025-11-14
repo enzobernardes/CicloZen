@@ -320,3 +320,140 @@ footer {
   display: flex;
   gap: 25px;
 }
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+    header {
+        padding: 3vw 5vw;
+    }
+
+    nav ul {
+        display: none; /* Simples (depois posso fazer menu hambúrguer se quiser) */
+    }
+
+    header .logo img {
+        width: 10vw;
+    }
+
+    header .logo p {
+        font-size: 5vw;
+    }
+
+    /* HERO */
+    .section1 {
+        height: 80vh;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section1 h1 {
+        width: 90%;
+        font-size: 12vw;
+        padding-top: 0;
+    }
+
+    .section1 p {
+        width: 80%;
+        font-size: 4vw;
+    }
+
+    /* SONO */
+    .section2 .sono {
+        height: auto;
+        padding: 10vw 5vw;
+        align-items: start;
+    }
+
+    .section2 .sono h1 {
+        font-size: 8vw;
+    }
+
+    .section2 .sono p {
+        font-size: 4vw;
+        width: 100%;
+    }
+
+    .section2 .sono ul li {
+        font-size: 4vw;
+    }
+
+    /* PRÉ-SONO */
+    .presono {
+        flex-direction: column;
+        height: auto;
+        padding: 5vw;
+    }
+
+    .presono .right img {
+        height: 25vh;
+    }
+
+    .left h1 {
+        font-size: 8vw;
+    }
+
+    .left p,
+    .left ul li {
+        font-size: 4vw;
+    }
+
+    /* BONS HÁBITOS */
+    .bonshabitos {
+        padding: 2rem 0;
+    }
+
+    .bonshabitos h1 {
+        font-size: 9vw;
+        width: auto;
+    }
+
+    .bonshabitos ul {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .bonshabitos ul li img {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    /* SINTOMAS */
+    .sintomas {
+        height: 70vh;
+        padding: 2rem 1rem;
+    }
+
+    .sintomas h1 {
+        font-size: 2rem;
+    }
+
+    .sintomas ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sintomas ul li {
+        font-size: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .left-footer h2 {
+        font-size: 1.5rem;
+    }
+
+    .left-footer ul {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+}
