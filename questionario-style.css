@@ -53,6 +53,10 @@ nav ul li a.active {
   text-decoration: underline 0.104vw;
 }
 
+main {
+  margin: 10vw 0 10vw 0;
+}
+
 footer {
   display: flex;
   justify-content: space-between;

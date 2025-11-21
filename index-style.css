@@ -8,15 +8,18 @@
     font-family: Inter;
 }
 
+/* ------------------ ESTILOS GERAIS/DESKTOP ------------------ */
+
 header {
     position: fixed;
-    z-index: 1;
+    z-index: 1000; /* Z-index alto para garantir que fique acima de tudo */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.04vh 2.6vw;
     background-color: white;
     width: 100%;
+    box-shadow: 0 0.1vh 0.5vh rgba(0, 0, 0, 0.1); /* Sombra para destacar o header */
 }
 
 header .logo {
@@ -28,6 +31,7 @@ header .logo {
 
 header .logo img {
     width: 2.08vw;
+    min-width: 30px; /* Garante tamanho mínimo para o logo em desktop */
 }
 
 header .logo p {
@@ -43,49 +47,59 @@ nav ul {
 
 nav ul li a {
     font-size: 1.04vw;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
     text-decoration: underline 0.104vw;
+    color: #5274A5; /* Cor de hover para melhor feedback */
 }
 
 nav ul li a.active {
     text-decoration: underline 0.104vw;
 }
 
+/* Ícone do menu (invisível no desktop) */
+.menu-icon {
+    display: none;
+    font-size: 6vw; /* Ajustado para mobile */
+    cursor: pointer;
+    color: #02193B;
+}
+
 .section1 {
-    margin-top: 0.03rem;
+    margin-top: 0; /* Removido o margin-top de 0.03rem */
     position: relative;
     height: 100vh;
     background-image: url('img/hero1.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 5.21vh;
+    padding: 5.21vh 2.6vw; /* Padding lateral adicionado */
     display: flex;
     flex-direction: column;
     gap: 1.04vh;
+    justify-content: center; /* Centraliza verticalmente o conteúdo na hero */
 }
 
 .section1 h1 {
     width: 50%;
-    padding-top: 5rem;
+    padding-top: 0; /* Removido o padding-top fixo */
     font-weight: 800;
-    font-style: Extra Bold;
     font-size: 6.67vw;
-    line-height: 100%;
-    letter-spacing: 0%;
+    line-height: 1.1; /* Ajuste no line-height para melhor leitura */
+    color: white; /* Cor do texto em branco para contraste com o fundo */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para o texto */
 }
 
 .section1 p {
-    font-family: Inter;
     font-weight: 800;
-    font-style: Extra Bold;
     font-size: 1.25vw;
-    line-height: 100%;
+    line-height: 1.5;
     letter-spacing: 0%;
     color: #5274A5;
-    width: 15%;
+    width: 30%; /* Aumentado o width para melhor apresentação */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para o texto */
 }
 
 .section2 {
@@ -93,140 +107,150 @@ nav ul li a.active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3vw;
-    gap: 2.6vh;
-    background-color: white;
+    padding: 5vw 3vw; /* Aumentado o padding vertical */
+    gap: 5vh; /* Aumentado o espaçamento entre as seções */
+    background-color: #f8f8f8; /* Cor de fundo suave para a seção */
 }
 
 .section2 .sono {
-    width: 95%;
-    height: 46.3vh;
+    width: 90%; /* Ajustado para 90% */
+    height: 45vh; /* Altura ajustada */
     background-image: url('img/sono.png');
-    background-position: center;
+    background-position: right center; /* Posicionamento ajustado */
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    gap: 0.26vh;
     justify-content: center;
     align-items: end;
     border-radius: 1vw;
-    /* ou o valor que quiser */
-    overflow: hidden;
     background-color: #003011;
-    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.45);
-    /* ESSENCIAL para cortar a imagem */
+    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.2); /* Sombra mais suave */
 }
 
 .sono .content-sono {
-    margin: 2.6vw 2.6vw;
+    margin: 0 4vw; /* Ajustado o margin */
+    width: 50%; /* Limita a largura do conteúdo de texto */
+    text-align: right;
 }
 
 .section2 .sono h1 {
-    font-family: Inter;
-    font-weight: 900;
-    font-style: Black;
-    font-size: 3.33vw;
-    line-height: 100%;
-    letter-spacing: 0%;
+    font-size: 3vw;
     color: white;
     margin-bottom: 2vh;
 }
 
 .section2 .sono p {
-    font-family: Inter;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 1.2vw;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: justify;
+    font-size: 1.1vw;
+    line-height: 1.4;
     color: white;
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
+}
+
+.section2 .sono ul {
+    list-style-type: none; /* Remove o marcador padrão */
+    text-align: right;
 }
 
 .section2 .sono ul li {
     color: white;
     margin-bottom: 0.8vh;
     font-weight: 500;
-    font-size: 1.04vw;
+    font-size: 1vw;
+    position: relative;
+    padding-right: 1.5vw;
+}
+
+.section2 .sono ul li::before {
+    content: "•"; /* Usa um ponto como marcador */
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    right: 0;
 }
 
 .section2 .presono {
-    width: 95%;
-    height: 46.3vh;
+    width: 90%;
+    height: auto; /* Deixa a altura flexível */
     display: flex;
     justify-content: space-between;
     margin: 2.6vw;
     background-color: white;
     border-radius: 0.83vw;
-    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.45);
+    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Garante que nada saia do container */
 }
 
 .presono .left {
     padding: 2.6vw;
+    width: 55%; /* Distribui o espaço */
 }
 
 .left h1 {
-    font-weight: 900;
-    font-style: Black;
-    font-size: 3.33vw;
-    line-height: 100%;
-    letter-spacing: 0%;
+    font-size: 3vw;
     margin-bottom: 2vh;
 }
 
 .left p {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 1.25vw;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: justify;
-    margin-bottom: 4vh;
+    font-size: 1.1vw;
+    line-height: 1.4;
+    margin-bottom: 2vh;
 }
 
 .left ul {
+    list-style-type: disc; /* Garante marcadores */
     display: flex;
     flex-direction: column;
     gap: 1vh;
-    margin-left: 1.04vw;
+    margin-left: 1.5vw;
 }
 
 .left ul li {
     font-weight: 500;
-    font-style: Medium;
-    font-size: 1.2vw;
+    font-size: 1vw;
+}
+
+.presono .right {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f4f8; /* Cor de fundo para a área da imagem */
 }
 
 .presono .right img {
-    height: 46.3vh;
-    width: auto;
+    height: 100%; /* Ajusta a imagem para preencher a altura */
+    width: 100%;
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
 }
 
 .bonshabitos {
-    padding: 5rem;
+    padding: 5rem 2vw; /* Padding horizontal ajustado */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5vh;
+    width: 100%;
+    max-width: 1200px; /* Limite de largura para desktop */
 }
 
 .bonshabitos h1 {
-    width: 22.1vw;
-    height: 7.13vh;
-    font-weight: 900;
-    font-style: Black;
-    font-size: 3.33vw;
+    width: auto;
+    font-size: 3vw;
+    text-align: center;
     margin-bottom: 2.5rem;
 }
 
 .bonshabitos ul {
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Alinha os itens no topo */
     justify-content: center;
-    gap: 8vw;
+    gap: 4vw; /* Reduzido o gap */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
 }
 
 .bonshabitos ul li {
@@ -236,81 +260,100 @@ nav ul li a.active {
     justify-content: center;
     gap: 0.5vh;
     font-weight: 800;
-    font-style: Extra Bold;
+    text-align: center;
+    max-width: 15vw; /* Limite de largura para cada item */
 }
 
 .bonshabitos ul li img {
-    height: 8vw;
-    width: 8vw;
+    height: 6vw; /* Reduzido o tamanho da imagem */
+    width: 6vw;
+    min-width: 80px; /* Tamanho mínimo para a imagem em desktop */
+    min-height: 80px;
     margin-bottom: 1.5vh;
+    object-fit: contain;
+}
+
+.bonshabitos ul li p {
+    font-size: 1vw;
+    line-height: 1.2;
 }
 
 .sintomas{
-    width: 95%;
-    height: 100vh;
+    width: 90%;
+    height: 70vh; /* Altura ajustada */
     background-image: url('img/medica.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 1vw;
-    /* ou o valor que quiser */
-    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.45);
+    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.2);
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    padding: 5rem 0;
-    gap: 2rem;
+    padding: 3rem 2rem; /* Padding ajustado */
+    gap: 1.5rem;
     text-align: center;
     margin-bottom: 5rem;
 }
 .sintomas h1{
-font-weight: 900;
-font-size: 4rem;
-color: white;
-
+    font-weight: 900;
+    font-size: 3vw;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 .sintomas ul{
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
+    list-style: none; /* Removido marcadores */
 
 }
 .sintomas ul li {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.1vw;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo para melhorar a legibilidade */
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 4vw; /* Padding ajustado */
   background: linear-gradient(to bottom, #497FCF, #112C54);
   color: white;
 }
 .right-footer{
   display: flex;
   align-items: center;
-  gap: 30px;
-  padding: 0 2vw;
+  gap: 1.5vw; /* Gap ajustado */
+  padding: 0;
+}
+
+.right-footer img {
+    width: 2.5vw;
+    min-width: 40px;
 }
 
 .right-footer p {
   color: white;
+  font-size: 0.9vw;
 }
 
 .left-footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-end; 
-  padding: 1vw 2vw;
+  padding: 0;
 }
 
 .left-footer h2 {
   color: white;
   margin-bottom: 1rem;
-  font-size: 30px;
+  font-size: 1.5vw;
 }
 
 .left-footer ul {
@@ -318,29 +361,142 @@ footer {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 25px;
+  gap: 1.5vw; /* Gap ajustado */
 }
 
-/* Responsividade */
+/* ------------------ RESPONSIVIDADE (MOBILE) ------------------ */
+
+/* Adicionado um Media Query para tablets ou telas médias */
+@media (max-width: 1024px) {
+    
+    header .logo img {
+        width: 4vw;
+    }
+    header .logo p {
+        font-size: 2vw;
+    }
+    nav ul li a {
+        font-size: 1.5vw;
+    }
+
+    .section1 h1 {
+        font-size: 8vw;
+        width: 70%;
+    }
+
+    .section1 p {
+        font-size: 2.5vw;
+        width: 50%;
+    }
+
+    .sono .content-sono {
+        width: 70%;
+    }
+
+    .section2 .sono h1 {
+        font-size: 5vw;
+    }
+    .section2 .sono p, .section2 .sono ul li {
+        font-size: 2.5vw;
+    }
+    
+    .left h1 {
+        font-size: 5vw;
+    }
+    .left p, .left ul li {
+        font-size: 2.5vw;
+    }
+
+    .presono .right img {
+        object-fit: contain;
+    }
+
+    .bonshabitos h1 {
+        font-size: 5vw;
+    }
+    .bonshabitos ul li {
+        max-width: 25vw;
+    }
+    .bonshabitos ul li img {
+        height: 10vw;
+        width: 10vw;
+    }
+    .bonshabitos ul li p {
+        font-size: 2vw;
+    }
+
+    .sintomas h1 {
+        font-size: 5vw;
+    }
+    .sintomas ul li {
+        font-size: 2vw;
+    }
+
+    .right-footer img {
+        width: 4vw;
+    }
+    .right-footer p {
+        font-size: 1.5vw;
+    }
+    .left-footer h2 {
+        font-size: 2.5vw;
+    }
+}
+
+
+
+.menu-icon {
+    display: none;
+    font-size: 1.5em; 
+    cursor: pointer;
+    z-index: 1001;
+}
 
 @media (max-width: 600px) {
+    /* Mostra o ícone do Menu no Mobile */
+    .menu-icon {
+        display: block;
+    }
 
-    /* HEADER */
-    header {
-        padding: 3vw 5vw;
+    /* Esconde a navegação padrão */
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Ajuste para logo abaixo do header */
+        left: 0;
+        background-color: white; /* Cor de fundo para o menu aberto */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    /* Estilo do menu quando aberto */
+    nav.open {
+        display: flex; /* O menu aparecerá quando tiver a classe 'open' */
     }
 
     nav ul {
-        display: none; /* Simples (depois posso fazer menu hambúrguer se quiser) */
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
     }
 
-    header .logo img {
-        width: 10vw;
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
     }
 
-    header .logo p {
-        font-size: 5vw;
+    nav ul li a {
+        font-size: 5vw; /* Tamanho maior para mobile */
+        display: block;
+        padding: 10px;
     }
+
+    /* **IMPORTANTE**: Remova ou comente a regra 'nav { display: none; }' que você tinha nas media queries anteriores. */
+    /* Exemplo da regra que você DEVE REMOVER/AJUSTAR: */
+    /* nav ul { display: none; } ou nav { display: none; } */
 
     /* HERO */
     .section1 {
@@ -348,112 +504,208 @@ footer {
         text-align: center;
         justify-content: center;
         align-items: center;
+        padding: 5vh 5vw;
     }
 
     .section1 h1 {
-        width: 90%;
+        width: 100%; /* Ocupa a largura total */
         font-size: 12vw;
         padding-top: 0;
+        line-height: 1.1;
     }
 
     .section1 p {
-        width: 80%;
-        font-size: 4vw;
+        width: 90%;
+        font-size: 5vw;
+        margin-top: 1vh;
+        width: 100%;
     }
 
     /* SONO */
     .section2 .sono {
         height: auto;
-        padding: 10vw 5vw;
-        align-items: start;
+        padding: 8vw 5vw;
+        align-items: center; /* Centraliza no mobile */
+        background-position: center center; /* Ajusta a imagem de fundo */
+    }
+
+    .sono .content-sono {
+        margin: 0;
+        width: 100%;
+        text-align: left; /* Alinha o texto à esquerda */
+        background-color: rgba(0, 0, 0, 0.4); /* Fundo escuro para melhorar contraste */
+        padding: 5vw;
+        border-radius: 0.83vw;
     }
 
     .section2 .sono h1 {
         font-size: 8vw;
+        margin-bottom: 2vh;
     }
 
     .section2 .sono p {
         font-size: 4vw;
         width: 100%;
+        margin-bottom: 2vh;
+        line-height: 1.4;
+    }
+
+    .section2 .sono ul {
+        text-align: left;
+        list-style-type: disc; /* Volta ao marcador padrão */
+        margin-left: 5vw;
     }
 
     .section2 .sono ul li {
         font-size: 4vw;
+        padding-right: 0;
+        margin-left: 0;
     }
+    
+    .section2 .sono ul li::before {
+        content: none; /* Remove o marcador personalizado */
+    }
+
 
     /* PRÉ-SONO */
     .presono {
         flex-direction: column;
         height: auto;
-        padding: 5vw;
+        padding: 0; /* Removido padding, será adicionado aos 'left' e 'right' */
+        width: 90%;
+        margin: 5vw 0;
     }
 
-    .presono .right img {
-        height: 25vh;
+    .presono .left {
+        padding: 5vw;
+        width: 100%; /* Ocupa a largura total */
     }
 
     .left h1 {
         font-size: 8vw;
+        margin-bottom: 1.5vh;
     }
 
-    .left p,
+    .left p {
+        font-size: 4vw;
+        margin-bottom: 3vh;
+    }
+
+    .left ul {
+        margin-left: 5vw;
+        gap: 1.5vh;
+    }
+
     .left ul li {
         font-size: 4vw;
     }
 
+    .presono .right {
+        width: 100%;
+        height: 35vh; /* Altura fixa para a imagem no mobile */
+    }
+
+    .presono .right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Garante que a imagem preencha a área */
+        border-radius: 0 0 0.83vw 0.83vw; /* Borda arredondada apenas na parte inferior */
+    }
+
     /* BONS HÁBITOS */
     .bonshabitos {
-        padding: 2rem 0;
+        padding: 2rem 5vw;
+        gap: 4vh;
     }
 
     .bonshabitos h1 {
         font-size: 9vw;
-        width: auto;
+        width: 100%;
     }
 
     .bonshabitos ul {
         flex-direction: column;
-        gap: 3rem;
+        gap: 5vh;
+    }
+
+    .bonshabitos ul li {
+        max-width: 80%;
+        flex-direction: row; /* Coloca imagem e texto lado a lado */
+        gap: 5vw;
+        text-align: left;
     }
 
     .bonshabitos ul li img {
-        width: 30vw;
-        height: 30vw;
+        width: 20vw;
+        height: 20vw;
+        margin-bottom: 0;
+        min-width: 60px;
+        min-height: 60px;
+    }
+    .bonshabitos ul li p {
+        font-size: 4vw;
     }
 
     /* SINTOMAS */
     .sintomas {
-        height: 70vh;
+        width: 90%;
+        height: 50vh; /* Altura reduzida */
         padding: 2rem 1rem;
+        gap: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
 
     .sintomas h1 {
-        font-size: 2rem;
+        font-size: 7vw;
+        line-height: 1.2;
     }
 
     .sintomas ul {
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.5rem;
     }
 
     .sintomas ul li {
-        font-size: 1rem;
+        font-size: 4vw;
+        padding: 0.5rem;
     }
 
     /* FOOTER */
     footer {
         flex-direction: column;
         text-align: center;
-        padding: 2rem;
+        padding: 5vw;
+        gap: 3vh;
+    }
+
+    .left-footer {
+        padding: 0;
+        align-items: center;
     }
 
     .left-footer h2 {
-        font-size: 1.5rem;
+        font-size: 5vw;
+        margin-bottom: 1.5vh;
     }
 
     .left-footer ul {
         justify-content: center;
-        gap: 2rem;
+        gap: 5vw;
+    }
+    
+    .right-footer{
+        flex-direction: column;
+        gap: 1vh;
+        padding: 0;
+    }
+
+    .right-footer img {
+        width: 8vw;
+    }
+
+    .right-footer p {
+        font-size: 3vw;
     }
 
 }

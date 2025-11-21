@@ -8,15 +8,18 @@
     font-family: Inter;
 }
 
+/* ------------------ ESTILOS GERAIS/DESKTOP ------------------ */
+
 header {
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.04vh 2.6vw;
     background-color: white;
     width: 100%;
+    box-shadow: 0 0.1vh 0.5vh rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
@@ -28,6 +31,7 @@ header .logo {
 
 header .logo img {
     width: 2.08vw;
+    min-width: 30px;
 }
 
 header .logo p {
@@ -43,10 +47,12 @@ nav ul {
 
 nav ul li a {
     font-size: 1.04vw;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
     text-decoration: underline 0.104vw;
+    color: #5274A5;
 }
 
 nav ul li a.active {
@@ -54,7 +60,7 @@ nav ul li a.active {
 }
 
 .section1 {
-    margin-top: 0.03rem;
+    margin-top: 0;
     position: relative;
     height: 100vh;
     background-image: url('img/cama.png');
@@ -69,27 +75,24 @@ nav ul li a.active {
 }
 
 .section1 .container {
-    margin-bottom: 10rem;
+    margin-bottom: 0; /* Removido o margin fixo */
 }
 
 .section1 h1 {
     font-weight: 800;
-    font-style: Extra Bold;
-    font-size: 6rem;
-    line-height: 100%;
-    letter-spacing: 0%;
+    font-size: 6vw; /* Ajustado para unidade fluida */
+    line-height: 1.1;
     color: white;
-
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .section1 p {
     font-weight: 800;
-    font-style: Extra Bold;
-    font-size: 1.2rem;
-    width: 12%;
-    line-height: 100%;
-    letter-spacing: 0%;
+    font-size: 1.2vw; /* Ajustado para unidade fluida */
+    width: 30%; /* Aumentado a largura para melhor leitura */
+    line-height: 1.5;
     color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .section2 {
@@ -97,152 +100,139 @@ nav ul li a.active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4vw;
-    gap: 4vw;
-    background-color: white;
+    padding: 4vw;
+    gap: 5vw; /* Aumentado o gap */
+    background-color: #f8f8f8;
 }
 
+/* RITUAL PRÉ-SONO (Elemento que sai da caixa) */
 .ritual-presono {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; /* Alinhamento para acomodar o ritual */
     background: #fff;
     border-radius: 2vw;
     padding: 4vh 4vw;
-    padding-left: 15%;
-    width: 95%;
-    box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.3);
-    gap: 2vw;
+    padding-left: 20vw; /* Espaço para a imagem */
+    width: 90%;
+    box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.2);
+    gap: 3vw;
     overflow: visible;
     min-height: 25vh;
-    /* astronauta pode "sair" da div */
 }
 
 .ritual {
     position: absolute;
-    left: -3vw;
-    top: -18vh;
-    width: 18vw;
+    left: 0;
+    top: 50%; /* Centraliza verticalmente o ponto de âncora */
+    transform: translate(-50%, -50%); /* Move 50% para fora (horizontal) e 50% para cima (vertical) */
+    width: 15vw; /* Tamanho ajustado */
     height: auto;
     filter: drop-shadow(0.5vw 0.8vh 1.5vh rgba(0, 0, 0, 0.3));
+    z-index: 10;
 }
 
 .ritual-presono img {
-    width: 32vw;
-    flex-shrink: 0;
+    display: none; /* Mantendo apenas o ícone de ritual */
 }
 
 .texto {
-    max-width: 60%;
+    max-width: 70%;
 }
 
 .texto h2 {
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 1.5vh;
 }
 
 .texto p {
-    font-size: 1.2rem;
+    font-size: 1.1vw;
     line-height: 1.6;
     color: #333;
 }
 
+/* ESTRATÉGIAS EFICAZES */
 .section2 .privacao {
-    width: 95%;
-    height: 46.3vh;
+    width: 90%;
+    height: 45vh; /* Altura ajustada */
     display: flex;
     justify-content: space-between;
     background-color: white;
     border-radius: 0.83vw;
-    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.45);
+    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.2);
     overflow: hidden;
     position: relative;
 }
 
 .privacao .left {
-    padding: 3em;
+    padding: 3vw;
+    width: 55%;
 }
 
 .left h1 {
-
     font-weight: 900;
-    font-size: 3.33vw;
-    line-height: 100%;
-    letter-spacing: 0%;
-    margin-bottom: 4vh;
-}
-
-.left p {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 1vw;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: justify;
-    margin-bottom: 4vh;
+    font-size: 3vw;
+    line-height: 1.1;
+    margin-bottom: 2vh;
 }
 
 .left ul {
+    list-style-type: disc;
     display: flex;
     flex-direction: column;
-    gap: 1vh;
-    margin-left: 1.04vw;
+    gap: 1.5vh;
+    margin-left: 1.5vw;
 }
 
 .left ul li {
     font-weight: 500;
-    font-style: Medium;
-    font-size: 1.1vw;
+    font-size: 1vw;
 }
 
 .privacao .right {
-    width: 50%;
-    /* ocupa metade da div .privacao */
+    width: 45%;
     height: 100%;
-    /* ocupa toda a altura da div */
     overflow: hidden;
-    /* esconde partes que ultrapassarem */
 }
 
 .privacao .right img {
     width: 100%;
-    /* cobre toda a largura da .right */
     height: 100%;
-    /* cobre toda a altura da .right */
     object-fit: cover;
-    /* mantém proporção e cobre a div */
     object-position: center;
-    /* foca no centro da imagem */
 }
 
+/* ALIMENTAÇÃO PRÉ-SONO (Nota dobrada) */
 .comidas {
-
-    width: 95%;
-    height: 100vh;
+    width: 90%;
+    height: 70vh; /* Altura ajustada */
     background-image: url('img/comida.png');
-    background-position: 5% 5%;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 1vw;
-    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.45);
+    box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: end;
-    padding: 10em;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    align-items: center; /* Centraliza verticalmente a nota */
+    padding: 5vw;
 }
 
 .note {
     display: flex;
     flex-direction: column;
     position: relative;
-    justify-content: center;
+    justify-content: flex-start;
     background: #FFD54F;
-    padding: 5rem;
-    width: 40%;
-    height: 70%;
+    padding: 2.5rem; /* Reduzido o padding */
+    width: 45%; /* Aumentado a largura relativa */
+    height: auto;
+    min-height: 50%;
     border: 0.2vh solid #ccc;
     box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
 
     /* recorte proporcional ao tamanho do canto (usando em) */
     clip-path: polygon(0 0,
@@ -258,7 +248,6 @@ nav ul li a.active {
     bottom: 0;
     right: 0;
     width: 2.5em;
-    /* mesmo valor em ambas as direções → quadrado perfeito */
     height: 2.5em;
     background: #BCA03E;
     clip-path: polygon(0 0, 100% 0, 0 100%);
@@ -267,52 +256,253 @@ nav ul li a.active {
 .note h3 {
     font-weight: 900;
     color: #545454;
-    font-size: 2rem;
+    font-size: 2vw; /* Ajustado para unidade fluida */
+    margin-bottom: 2vh;
 
 }
+.note ul{
+    list-style-type: disc;
+}
+
 .note ul li{
     color: #545454;
-    margin-left: 0.7rem;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-
+    margin-left: 1vw;
+    margin-top: 1.5vh;
+    font-size: 1vw; /* Ajustado para unidade fluida */
+    line-height: 1.4;
 }
+
+/* FOOTER */
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: linear-gradient(to bottom, #497FCF, #112C54);
-  color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 4vw;
+    background: linear-gradient(to bottom, #497FCF, #112C54);
+    color: white;
 }
 .right-footer{
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  padding: 0 2vw;
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    padding: 0;
+}
+
+.right-footer img {
+    width: 2.5vw;
+    min-width: 40px;
 }
 
 .right-footer p {
-  color: white;
+    color: white;
+    font-size: 0.9vw;
 }
 
 .left-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 1vw 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
 }
 
 .left-footer h2 {
-  color: white;
-  margin-bottom: 1rem;
-  font-size: 30px;
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.5vw;
 }
 
 .left-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5vw;
+}
+
+/* ------------------ RESPONSIVIDADE (MOBILE) ------------------ */
+
+@media (max-width: 1024px) {
+    /* Ajustes para Tablets */
+    header .logo img { width: 4vw; }
+    header .logo p { font-size: 2vw; }
+    nav ul li a { font-size: 1.5vw; }
+
+    .section1 h1 { font-size: 8vw; }
+    .section1 p { font-size: 2vw; width: 50%; }
+
+    .ritual { width: 25vw; }
+    .ritual-presono { padding-left: 15vw; }
+    .texto h2 { font-size: 3vw; }
+    .texto p { font-size: 1.8vw; }
+
+    .left h1 { font-size: 5vw; }
+    .left ul li { font-size: 2vw; }
+    .section2 .privacao { height: 40vh; }
+
+    .note { width: 60%; padding: 2rem; }
+    .note h3 { font-size: 4vw; }
+    .note ul li { font-size: 2.5vw; margin-left: 2vw; }
+
+    .right-footer img { width: 4vw; }
+    .right-footer p { font-size: 1.5vw; }
+    .left-footer h2 { font-size: 2.5vw; }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+    header { padding: 4vw 5vw; }
+    nav { display: none; }
+    header .logo img { width: 8vw; }
+    header .logo p { font-size: 6vw; }
+
+    /* HERO */
+    .section1 {
+        height: 60vh;
+        padding: 5vh 5vw;
+        justify-content: flex-end;
+    }
+
+    .section1 h1 {
+        font-size: 12vw;
+        line-height: 1.1;
+    }
+
+    .section1 p {
+        width: 100%;
+        font-size: 4.5vw;
+    }
+
+    /* RITUAL PRÉ-SONO */
+    .section2 {
+        padding: 5vw;
+    }
+
+    .ritual-presono {
+        flex-direction: column;
+        text-align: center;
+        padding: 10vw 5vw;
+        width: 90%;
+        padding-left: 5vw;
+        min-height: auto;
+    }
+
+    .ritual {
+        position: static;
+        transform: none;
+        width: 40vw;
+        margin-bottom: 3vh;
+        filter: none;
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+    .texto h2 {
+        font-size: 6vw;
+        margin-bottom: 1vh;
+    }
+
+    .texto p {
+        font-size: 4vw;
+        line-height: 1.5;
+    }
+
+    /* ESTRATÉGIAS EFICAZES */
+    .section2 .privacao {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+
+    .privacao .left {
+        padding: 5vw;
+        width: 100%;
+    }
+
+    .left h1 {
+        font-size: 8vw;
+        margin-bottom: 2vh;
+        text-align: center;
+    }
+
+    .left ul {
+        margin-left: 5vw;
+        gap: 1.5vh;
+    }
+
+    .left ul li {
+        font-size: 4vw;
+    }
+
+    .privacao .right {
+        width: 100%;
+        height: 30vh;
+    }
+
+    /* ALIMENTAÇÃO PRÉ-SONO (Nota dobrada) */
+    .comidas {
+        height: 80vh; /* Altura ajustada */
+        padding: 5vw;
+        justify-content: center; /* Centraliza no mobile */
+        align-items: center;
+        background-position: 70% center; /* Ajusta o foco da imagem de fundo */
+    }
+
+    .note {
+        width: 90%; /* Ocupa quase a largura total */
+        min-height: 50vh;
+        padding: 1.5rem;
+    }
+
+    .note h3 {
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    .note ul li {
+        font-size: 4vw;
+        margin-left: 4vw;
+        margin-top: 1.5rem;
+    }
+
+    /* FOOTER */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 5vw;
+        gap: 3vh;
+    }
+
+    .left-footer {
+        padding: 0;
+        align-items: center;
+    }
+
+    .left-footer h2 {
+        font-size: 5vw;
+        margin-bottom: 1.5vh;
+    }
+
+    .left-footer ul {
+        justify-content: center;
+        gap: 5vw;
+    }
+
+    .right-footer{
+        flex-direction: column;
+        gap: 1vh;
+        padding: 0;
+    }
+
+    .right-footer img {
+        width: 8vw;
+    }
+
+    .right-footer p {
+        font-size: 3vw;
+    }
 }
