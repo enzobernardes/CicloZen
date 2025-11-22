@@ -7,45 +7,45 @@
     color: #02193B;
     font-family: Inter;
 }
-
 header {
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.04vh 2.6vw;
     background-color: white;
     width: 100%;
+    box-shadow: 0 0.1vh 0.5vh rgba(0, 0, 0, 0.1);
 }
-
 header .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.52vw;
 }
-
 header .logo img {
     width: 2.08vw;
+    min-width: 30px;
 }
-
 header .logo p {
     font-size: 1.25vw;
     font-weight: 800;
 }
-
 nav ul {
     display: flex;
     gap: 1.56vw;
     list-style: none;
 }
-
 nav ul li a {
     font-size: 1.04vw;
+    transition: color 0.3s;
 }
-
 nav ul li a:hover {
+    text-decoration: underline 0.104vw;
+    color: #5274A5;
+}
+nav ul li a.active {
     text-decoration: underline 0.104vw;
 }
 
@@ -67,19 +67,15 @@ nav ul li a:hover {
     width: 50%;
     padding-top: 5rem;
     font-weight: 800;
-    font-style: Extra Bold;
     font-size: 6.67vw;
     line-height: 100%;
-    letter-spacing: 0%;
 }
 
 .section1 p {
     font-family: Inter;
     font-weight: 800;
-    font-style: Extra Bold;
     font-size: 1.25vw;
     line-height: 100%;
-    letter-spacing: 0%;
     color: #5274A5;
     width: 15%;
 }
@@ -117,10 +113,8 @@ nav ul li a:hover {
 .section2 .box h1 {
     font-family: Inter;
     font-weight: 900;
-    font-style: Black;
     font-size: 3.33vw;
     line-height: 100%;
-    letter-spacing: 0%;
     color: #02193B;
     margin-bottom: 2vh;
 }
@@ -128,10 +122,8 @@ nav ul li a:hover {
 .section2 .box p {
     font-family: Inter;
     font-weight: 700;
-    font-style: Bold;
     font-size: 1.2vw;
     line-height: 100%;
-    letter-spacing: 0%;
     text-align: justify;
     color: #02193B;
     margin-bottom: 4vh;

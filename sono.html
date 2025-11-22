@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CicloZen</title>
-    <link rel="stylesheet" href="sono-style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CicloZen</title>
+  <link rel="stylesheet" href="sono-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
   <header>
     <div class="logo">
-        <a href="index.html"> <img src="img/logo.png" alt="logo" /></a>
+      <a href="index.html"> <img src="img/logo.png" alt="logo"></a>
       <p>CicloZen</p>
     </div>
     <nav>
@@ -28,18 +31,14 @@
       </ul>
     </nav>
   </header>
-  <body>
+  <main>
     <section class="section1">
       <h1>Sono</h1>
       <p>Seu sono define sua qualidade de vida, cuide-se</p>
     </section>
     <section class="section2">
       <div class="beneficios">
-        <img
-          src="img/benefícios.png"
-          alt="Astronauta Dormindo"
-          class="astronauta"
-        />
+        <img src="img/benefícios.png" alt="Astronauta Dormindo" class="astronauta">
         <div class="texto">
           <h2>Benefícios do Sono de Qualidade</h2>
           <p>
@@ -86,57 +85,73 @@
           </ul>
         </div>
         <div class="right">
-          <img src="img/presono.png" alt="presono" />
+          <img src="img/presono.png" alt="presono">
         </div>
       </div>
-       <div class="bonshabitos">
+      <div class="bonshabitos">
         <h1>Dormir é uma necessidade biológica universal</h1>
         <ul>
           <li>
-            <img src="img/Vector.png" alt="" />
+            <img src="img/Vector.png" alt="">
             <p>Restauro físico</p>
           </li>
           <li>
-            <img src="img/Vector-1.png" alt="" />
+            <img src="img/Vector-1.png" alt="">
             <p>Equilíbrio Hormonal</p>
           </li>
           <li>
-            <img src="img/Vector-2.png" alt="" />
+            <img src="img/Vector-2.png" alt="">
             <p>Saúde mental</p>
           </li>
           <li>
-            <img src="img/Vector-3.png" alt="" />
+            <img src="img/Vector-3.png" alt="">
             <p>Imunidade</p>
           </li>
         </ul>
       </div>
     </section>
-  </body>
-<footer>
-  <div class="left-footer">
-    <h2>Redes Sociais:</h2>
-    <ul>
-      <li>
-        <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
-          <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://x.com/ciclo_zen_">
-          <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/enzobernardes/CicloZen">
-          <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
+  </main>
+  <footer>
+    <div class="left-footer">
+      <h2>Redes Sociais:</h2>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
+            <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/ciclo_zen_">
+            <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/enzobernardes/CicloZen">
+            <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-  <div class="right-footer">
-    <img src="img/logo.png" alt="logo" />
-    <p>CicloZen © Todos os direitos reservados.</p>
-  </div>
-</footer>
+    <div class="right-footer">
+      <img src="img/logo.png" alt="logo">
+      <p>CicloZen © Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script>
+  function toggleMenu() {
+    const nav = document.getElementById('mobile-menu');
+    nav.classList.toggle('open');
+  }
+
+  const links = document.querySelectorAll('#mobile-menu a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.remove('open');
+    });
+  });
+  
+</script>
+</body>
+
 </html>

@@ -1,79 +1,114 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CicloZen</title>
-    <link rel="stylesheet" href="referencias-style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CicloZen</title>
+  <link rel="stylesheet" href="referencias-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
   <header>
     <div class="logo">
-      <img src="img/logo.png" alt="logo" />
+      <a href="index.html"> <img src="img/logo.png" alt="logo"></a>
       <p>CicloZen</p>
     </div>
-    <nav>
+    <nav id="mobile-menu">
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="sono.html">Sono</a></li>
-        <li><a href="presono.html">Pré-sono</a></li>
+        <li><a href="preSono.html">Pré-sono</a></li>
         <li><a href="habitos.html">Hábitos</a></li>
         <li><a href="questionario.html">Questionário</a></li>
-        <li><a href="sobrenos.html">Sobre nós</a></li>
+        <li><a href="sobreNos.html">Sobre nós</a></li>
       </ul>
     </nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
   </header>
-  <body>
-    <section class="section1">
-        <h1>Referências</h1>
-        <p>Aqui estão todas as nossas referências</p>
-    </section>
-    <section class="section2">
-      <div class="box">
-        <div class="div">
-          <h1>Referências Utilizadas</h1>
-          <p>Para a elaboração deste conteúdo, utilizamos referências provenientes de cinco sites selecionados por meio de pesquisa no Google.</p>
-          <ul>
-            <li><a href="https://abqv.org.br/qualidade-do-sono-e-fundamental-para-a-saude-e-o-bem-estar/?gad_source=1&gad_campaignid=22495448520&gbraid=0AAAAA_LDcoeVn93TTM8dodSC8HyIsxBrp&gclid=CjwKCAjw7MLDBhAuEiwAIeXGIbvlj92YWK3RlaFjbJpJEdCT_TqwISBbrWOsHTa0Pq3Xo8FBocH-fRoC_dAQAvD_BwE">Primeiro site:</a> pertence a uma associação reconhecida na área de qualidade de vida, oferecendo informações confiáveis sobre o tema.</li>
-            <li> <a href="https://saude.abril.com.br/medicina/higiene-do-sono-como-fazer/?utm_source=google&utm_medium=cpc&utm_campaign=eda_vejasaude_audiencia_institucional&gad_source=1&gad_campaignid=18443294854&gbraid=0AAAAAo7nfA8X_lOD5e560Op8WZy1w6SXL&gclid=CjwKCAjw7MLDBhAuEiwAIeXGIWjRN6804ZWgbxJXni9JZsUeP9OTlAjE8ZTmUdgrRI3nKmXL48rpcxoCnhwQAvD_BwE">Segundo site:</a> trata-se da Revista Veja, amplamente conhecida por suas publicações sobre notícias e assuntos do cotidiano.</li>
-            <li> <a href="https://drauziovarella.uol.com.br/neurologia/higiene-do-sono-conheca-11-dicas-para-dormir-melhor/">Terceiro site:</a> foi selecionado a partir das referências do Dr. Dráuzio Varella, que divulga orientações e conteúdos relevantes sobre saúde na internet.</li>
-            <li> <a href="https://blog.sabin.com.br/autocuidado/como-melhorar-a-qualidade-do-sono">Quarto site:</a> apresenta dicas e orientações sobre a qualidade do sono, contribuindo para uma melhor compreensão dos hábitos de descanso.</li>
-            <li><a href="https://saude.sesisc.org.br/blog/promocao-da-saude-nas-empresas/dormir-bem-saude-mental/">Quinto site:</a> pertence ao SESI, e oferece informações sobre a duração ideal do sono e práticas para dormir melhor.</li>
-          </ul>
-        </div>
-        </div>
-    </section>
-  </body>
-<footer>
-  <div class="left-footer">
-    <h2>Redes Sociais:</h2>
-    <ul>
-      <li>
-        <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
-          <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://x.com/ciclo_zen_">
-          <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/enzobernardes/CicloZen">
-          <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
+  <main>
+  <section class="section1">
+    <h1>Referências</h1>
+    <p>Aqui estão todas as nossas referências</p>
+  </section>
+  <section class="section2">
+    <div class="box">
+      <div class="div">
+        <h1>Referências Utilizadas</h1>
+        <p>Para a elaboração deste conteúdo, utilizamos referências provenientes de cinco sites selecionados por meio de
+          pesquisa no Google.</p>
+        <ul>
+          <li><a
+              href="https://abqv.org.br/qualidade-do-sono-e-fundamental-para-a-saude-e-o-bem-estar/?gad_source=1&gad_campaignid=22495448520&gbraid=0AAAAA_LDcoeVn93TTM8dodSC8HyIsxBrp&gclid=CjwKCAjw7MLDBhAuEiwAIeXGIbvlj92YWK3RlaFjbJpJEdCT_TqwISBbrWOsHTa0Pq3Xo8FBocH-fRoC_dAQAvD_BwE">Primeiro
+              site:</a> pertence a uma associação reconhecida na área de qualidade de vida, oferecendo informações
+            confiáveis sobre o tema.</li>
+          <li> <a
+              href="https://saude.abril.com.br/medicina/higiene-do-sono-como-fazer/?utm_source=google&utm_medium=cpc&utm_campaign=eda_vejasaude_audiencia_institucional&gad_source=1&gad_campaignid=18443294854&gbraid=0AAAAAo7nfA8X_lOD5e560Op8WZy1w6SXL&gclid=CjwKCAjw7MLDBhAuEiwAIeXGIWjRN6804ZWgbxJXni9JZsUeP9OTlAjE8ZTmUdgrRI3nKmXL48rpcxoCnhwQAvD_BwE">Segundo
+              site:</a> trata-se da Revista Veja, amplamente conhecida por suas publicações sobre notícias e assuntos do
+            cotidiano.</li>
+          <li> <a
+              href="https://drauziovarella.uol.com.br/neurologia/higiene-do-sono-conheca-11-dicas-para-dormir-melhor/">Terceiro
+              site:</a> foi selecionado a partir das referências do Dr. Dráuzio Varella, que divulga orientações e
+            conteúdos relevantes sobre saúde na internet.</li>
+          <li> <a href="https://blog.sabin.com.br/autocuidado/como-melhorar-a-qualidade-do-sono">Quarto site:</a>
+            apresenta dicas e orientações sobre a qualidade do sono, contribuindo para uma melhor compreensão dos
+            hábitos de descanso.</li>
+          <li><a href="https://saude.sesisc.org.br/blog/promocao-da-saude-nas-empresas/dormir-bem-saude-mental/">Quinto
+              site:</a> pertence ao SESI, e oferece informações sobre a duração ideal do sono e práticas para dormir
+            melhor.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer>
+    <div class="left-footer">
+      <h2>Redes Sociais:</h2>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
+            <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/ciclo_zen_">
+            <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/enzobernardes/CicloZen">
+            <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-  <div class="right-footer">
-    <img src="img/logo.png" alt="logo" />
-    <p>CicloZen © Todos os direitos reservados.</p>
-  </div>
-</footer>
+    <div class="right-footer">
+      <img src="img/logo.png" alt="logo">
+      <p>CicloZen © Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script>
+  function toggleMenu() {
+    const nav = document.getElementById('mobile-menu');
+    nav.classList.toggle('open');
+  }
+
+  const links = document.querySelectorAll('#mobile-menu a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.remove('open');
+    });
+  });
+</script>
+</body>
+
 </html>

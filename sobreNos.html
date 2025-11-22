@@ -2,113 +2,136 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CicloZen</title>
-  <link rel="stylesheet" href="sobrenos-style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="sobrenos-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<header>
-  <div class="logo">
-     <a href="index.html"> <img src="img/logo.png" alt="logo" /></a>
-    <p>CicloZen</p>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="sono.html">Sono</a></li>
-      <li><a href="preSono.html">Pré-sono</a></li>
-      <li><a href="habitos.html">Hábitos</a></li>
-      <li><a href="questionario.html">Questionário</a></li>
-      <li><a href="sobrenos.html" class="active">Sobre nós</a></li>
-    </ul>
-  </nav>
-</header>
-<section class="section1">
-  <h1>Quem somos?</h1>
 
-</section>
-<section class="section2">
-  <div class="acreditamos">
-    <h1>No que acreditamos?</h1>
-    <p>O CicloZen é um projeto criado por estudantes do ensino médio do instituto federal catarinense campus Araquari, com o objetivo de 
-conscientizar sobre a importância de 
-dormir bem. Nosso propósito é 
-transformar informação científica 
-em conhecimento acessível, ajudando 
-cada pessoa a melhorar sua qualidade 
-de vida através do sono.</p>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"> <img src="img/logo.png" alt="logo"></a>
+      <p>CicloZen</p>
+    </div>
+    <nav id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sono.html">Sono</a></li>
+        <li><a href="preSono.html">Pré-sono</a></li>
+        <li><a href="habitos.html">Hábitos</a></li>
+        <li><a href="questionario.html">Questionário</a></li>
+        <li><a href="sobreNos.html" class="active">Sobre nós</a></li>
+      </ul>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+  <main>
+  <section class="section1">
+    <h1>Quem somos?</h1>
+
+  </section>
+  <section class="section2">
+    <div class="acreditamos">
+      <h1>No que acreditamos?</h1>
+      <p>O CicloZen é um projeto criado por estudantes do ensino médio do instituto federal catarinense campus Araquari,
+        com o objetivo de
+        conscientizar sobre a importância de
+        dormir bem. Nosso propósito é
+        transformar informação científica
+        em conhecimento acessível, ajudando
+        cada pessoa a melhorar sua qualidade
+        de vida através do sono.</p>
       <p>
-         Acreditamos que pequenas mudanças de hábitos podem gerar grandes transformações na hora de dormir e no nosso dia
-      a dia por causa de um sono regulado ou não. Por isso, reunimos dicas práticas, hábitos, pesquisas recentes e
-      estratégias simples para que qualquer pessoa, independentemente da rotina, possa ter noites mais tranquilas e
-      melhores.
-      Dormir bem é viver melhor. E dormir é so com CicloZen.
+        Acreditamos que pequenas mudanças de hábitos podem gerar grandes transformações na hora de dormir e no nosso dia
+        a dia por causa de um sono regulado ou não. Por isso, reunimos dicas práticas, hábitos, pesquisas recentes e
+        estratégias simples para que qualquer pessoa, independentemente da rotina, possa ter noites mais tranquilas e
+        melhores.
+        Dormir bem é viver melhor. E dormir é so com CicloZen.
       </p>
-  </div>
-  <div class="referencias">
-    <p>
-          <a href="referencias.html">
-            Referências
+    </div>
+    <div class="referencias">
+      <p>
+        <a href="referencias.html">
+          Referências
+        </a>
+      </p>
+    </div>
+    <div class="membros">
+      <h1> Membros</h1>
+      <ul>
+        <li>
+          <img src="img/rian.jpg" alt="">
+          <p>Rian Oliveira</p>
+        </li>
+        <li>
+          <img src="img/gustavo.jpg" alt="">
+          <p>Gustavo Bittencourt</p>
+        </li>
+        <li>
+          <img src="img/enzo.jpg" alt="">
+          <p>Enzo Bernardes</p>
+        </li>
+        <li>
+          <img src="img/gamaliel.jpg" alt="">
+          <p>Gamaliel Travesti</p>
+        </li>
+        <li>
+          <img src="img/wesley.jpg" alt="">
+          <p>Wesley Madeira</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  </main>
+  <footer>
+    <div class="left-footer">
+      <h2>Redes Sociais:</h2>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
+            <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
           </a>
-      </p>
-  </div>
-  <div class="membros">
-    <h1> Membros</h1>
-    <ul>
-      <li>
-        <img src="img/rian.jpg" alt="">
-        <p>Rian Oliveira</p>
-      </li>
-      <li>
-        <img src="img/gustavo.jpg" alt="">
-        <p>Gustavo Bittencourt</p>
-      </li>
-      <li>
-        <img src="img/enzo.jpg" alt="">
-        <p>Enzo Bernardes</p>
-      </li>
-      <li>
-        <img src="img/gamaliel.jpg" alt="">
-        <p>Gamaliel Travesti</p>
-      </li>
-      <li>
-        <img src="img/wesley.jpg" alt="">
-        <p>Wesley Madeira</p>
-      </li>
-    </ul>
-  </div>
-</section>
-<footer>
-  <div class="left-footer">
-    <h2>Redes Sociais:</h2>
-    <ul>
-      <li>
-        <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
-          <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://x.com/ciclo_zen_">
-          <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/enzobernardes/CicloZen">
-          <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
+        </li>
+        <li>
+          <a href="https://x.com/ciclo_zen_">
+            <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/enzobernardes/CicloZen">
+            <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-  <div class="right-footer">
-    <img src="img/logo.png" alt="logo" />
-    <p>CicloZen © Todos os direitos reservados.</p>
-  </div>
-</footer>
+    <div class="right-footer">
+      <img src="img/logo.png" alt="logo">
+      <p>CicloZen © Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script>
+  function toggleMenu() {
+    const nav = document.getElementById('mobile-menu');
+    nav.classList.toggle('open');
+  }
+
+  const links = document.querySelectorAll('#mobile-menu a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.remove('open');
+    });
+  });
+</script>
+</body>
+
 </html>

@@ -2,120 +2,140 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CicloZen</title>
-    <link rel="stylesheet" href="index-style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CicloZen</title>
+  <link rel="stylesheet" href="questionario-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
-<header>
+  <header>
     <div class="logo">
-        <a href="index.html"> <img src="img/logo.png" alt="logo" /></a>
-        <p>CicloZen</p>
+      <a href="index.html"> <img src="img/logo.png" alt="logo"></a>
+      <p>CicloZen</p>
     </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sono.html">Sono</a></li>
-            <li><a href="preSono.html">Pré-sono</a></li>
-            <li><a href="habitos.html">Hábitos</a></li>
-            <li><a href="questionario.html" class="active">Questionário</a></li>
-            <li><a href="sobreNos.html">Sobre nós</a></li>
-        </ul>
+    <nav id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sono.html">Sono</a></li>
+        <li><a href="preSono.html">Pré-sono</a></li>
+        <li><a href="habitos.html">Hábitos</a></li>
+        <li><a href="questionario.html" class="active">Questionário</a></li>
+        <li><a href="sobreNos.html">Sobre nós</a></li>
+      </ul>
     </nav>
-</header>
-<main>
-  <section>
-    <h1>
-      Questionário
-    </h1>
-<form>
-  <label for="estudo">Quantas horas por dia você passa estudando?</label>
-  <select id="estudo" name="estudo">
-  <option value="1-3">Entre 1 e 3</option>
-  <option value="3-6">Entre 3 e 6</option>
-  <option value="6+">Mais do que 6</option>
-  </select>
-  <br><br>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+  <main>
+    <section class="quest">
+      <h1>
+        Questionário
+      </h1>
+      <form>
+        <label for="estudo">Quantas horas por dia você passa estudando?</label>
+        <select id="estudo" name="estudo">
+          <option value="1-3">Entre 1 e 3</option>
+          <option value="3-6">Entre 3 e 6</option>
+          <option value="6+">Mais do que 6</option>
+        </select>
+        <br><br>
 
-  <label for="exercicio">Quantas horas por dia você se exercita?</label>
-  <select id="exercicio" name="exercicio">
-  <option value="0">Nenhuma</option>
-  <option value="menos1">Menos de 1</option>
-  <option value="1-3">Entre 1 e 3</option>
-  <option value="3-6">Entre 3 e 6</option>
-  <option value="6+">Mais do que 6</option>
-  </select>
-  <br><br>
+        <label for="exercicio">Quantas horas por dia você se exercita?</label>
+        <select id="exercicio" name="exercicio">
+          <option value="0">Nenhuma</option>
+          <option value="menos1">Menos de 1</option>
+          <option value="1-3">Entre 1 e 3</option>
+          <option value="3-6">Entre 3 e 6</option>
+          <option value="6+">Mais do que 6</option>
+        </select>
+        <br><br>
 
-  <label for="trabalho">Quantas horas por dia você passa trabalhando/estudando?</label>
-  <select id="trabalho" name="trabalho">
-  <option value="menos1">Menos de 1</option>
-  <option value="1-3">Entre 1 e 3</option>
-  <option value="3-6">Entre 3 e 6</option>
-  <option value="6+">Mais do que 6</option>
-  <option value="nenhum">Não trabalho ou estudo</option>
-  </select>
-  <br><br>
+        <label for="trabalho">Quantas horas por dia você passa trabalhando/estudando?</label>
+        <select id="trabalho" name="trabalho">
+          <option value="menos1">Menos de 1</option>
+          <option value="1-3">Entre 1 e 3</option>
+          <option value="3-6">Entre 3 e 6</option>
+          <option value="6+">Mais do que 6</option>
+          <option value="nenhum">Não trabalho ou estudo</option>
+        </select>
+        <br><br>
 
-  <label for="dormir">Em média, a que horas você se deita durante a semana?</label>
-  <input type="time" id="dormir" name="dormir">
-  <br><br>
+        <label for="dormir">Em média, a que horas você se deita durante a semana?</label>
+        <input type="time" id="dormir" name="dormir">
+        <br><br>
 
-  <label for="acordar">Em média, a que horas você acorda durante a semana?</label>
-  <input type="time" id="acordar" name="acordar">
-  <br><br>
+        <label for="acordar">Em média, a que horas você acorda durante a semana?</label>
+        <input type="time" id="acordar" name="acordar">
+        <br><br>
 
-  <label for="sono">Quantas horas de sono você realmente tem por noite, em média, durante a semana?</label>
-  <input type="number" id="sono" name="sono" step="0.5" placeholder="Ex: 6.5">
-  <br><br>
+        <label for="sono">Quantas horas de sono você realmente tem por noite, em média, durante a semana?</label>
+        <input type="number" id="sono" name="sono" step="0.5" placeholder="Ex: 6.5">
+        <br><br>
 
-  <label for="adormecer">Quanto tempo (em minutos) você leva para adormecer depois de se deitar?</label>
-  <input type="number" id="adormecer" name="adormecer" placeholder="Ex: 20">
-  <br><br>
+        <label for="adormecer">Quanto tempo (em minutos) você leva para adormecer depois de se deitar?</label>
+        <input type="number" id="adormecer" name="adormecer" placeholder="Ex: 20">
+        <br><br>
 
-  <label for="fins">Você costuma ter uma rotina de sono muito diferente nos fins de semana?</label>
-  <select id="fins" name="fins">
-  <option value="sim">Sim</option>
-  <option value="não">Não</option>
-  </select>
-  <br><br>
+        <label for="fins">Você costuma ter uma rotina de sono muito diferente nos fins de semana?</label>
+        <select id="fins" name="fins">
+          <option value="sim">Sim</option>
+          <option value="não">Não</option>
+        </select>
+        <br><br>
 
-  <button type="submit">Enviar</button>
+        <button type="submit">Enviar</button>
 
-</form>
-<footer>
-  <div class="left-footer">
-    <h2>Redes Sociais:</h2>
-    <ul>
-      <li>
-        <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
-          <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://x.com/ciclo_zen_">
-          <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/enzobernardes/CicloZen">
-          <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="left-footer">
+      <h2>Redes Sociais:</h2>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
+            <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/ciclo_zen_">
+            <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/enzobernardes/CicloZen">
+            <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-  <div class="right-footer">
-    <img src="img/logo.png" alt="logo" />
-    <p>CicloZen © Todos os direitos reservados.</p>
-  </div>
-</footer>
+    <div class="right-footer">
+      <img src="img/logo.png" alt="logo">
+      <p>CicloZen © Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script>
+  function toggleMenu() {
+    const nav = document.getElementById('mobile-menu');
+    nav.classList.toggle('open');
+  }
+
+  const links = document.querySelectorAll('#mobile-menu a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.remove('open');
+    });
+  });
+</script>
 </body>
+
 </html>

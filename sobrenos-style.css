@@ -7,48 +7,44 @@
     color: #02193B;
     font-family: Inter;
 }
-
 header {
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.04vh 2.6vw;
     background-color: white;
     width: 100%;
+    box-shadow: 0 0.1vh 0.5vh rgba(0, 0, 0, 0.1);
 }
-
 header .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.52vw;
 }
-
 header .logo img {
     width: 2.08vw;
+    min-width: 30px;
 }
-
 header .logo p {
     font-size: 1.25vw;
     font-weight: 800;
 }
-
 nav ul {
     display: flex;
     gap: 1.56vw;
     list-style: none;
 }
-
 nav ul li a {
     font-size: 1.04vw;
+    transition: color 0.3s;
 }
-
 nav ul li a:hover {
     text-decoration: underline 0.104vw;
+    color: #5274A5;
 }
-
 nav ul li a.active {
     text-decoration: underline 0.104vw;
 }
@@ -71,10 +67,8 @@ nav ul li a.active {
 
 .section1 h1 {
     font-weight: 800;
-    font-style: Extra Bold;
     font-size: 6rem;
     line-height: 100%;
-    letter-spacing: 0%;
     color: white;
 }
 
@@ -98,19 +92,15 @@ nav ul li a.active {
 
 .acreditamos h1 {
     font-weight: 900;
-    font-style: Black;
     font-size: 3em;
     line-height: 100%;
-    letter-spacing: 0%;
     margin-bottom: 0.5em;
 }
 
 .acreditamos p {
     font-weight: 700;
-    font-style: Bold;
     font-size: 1.5em;
     line-height: 1.2;
-    letter-spacing: 0%;
     text-align: justify;
 
 }
@@ -141,8 +131,6 @@ nav ul li a.active {
 font-weight: 900;
 font-size: 3rem;
 line-height: 100%;
-letter-spacing: 0%;
-
 }
 .membros ul {
     display: flex;
@@ -165,10 +153,8 @@ letter-spacing: 0%;
 
 .membros ul li p {
     font-weight: 800;
-    font-style: Extra Bold;
     font-size: 1rem;
     line-height: 100%;
-    letter-spacing: 0%;
     text-align: justify;
     color: #02193B;
 

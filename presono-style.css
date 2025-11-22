@@ -7,9 +7,6 @@
     color: #02193B;
     font-family: Inter;
 }
-
-/* ------------------ ESTILOS GERAIS/DESKTOP ------------------ */
-
 header {
     position: fixed;
     z-index: 1000;
@@ -21,44 +18,36 @@ header {
     width: 100%;
     box-shadow: 0 0.1vh 0.5vh rgba(0, 0, 0, 0.1);
 }
-
 header .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.52vw;
 }
-
 header .logo img {
     width: 2.08vw;
     min-width: 30px;
 }
-
 header .logo p {
     font-size: 1.25vw;
     font-weight: 800;
 }
-
 nav ul {
     display: flex;
     gap: 1.56vw;
     list-style: none;
 }
-
 nav ul li a {
     font-size: 1.04vw;
     transition: color 0.3s;
 }
-
 nav ul li a:hover {
     text-decoration: underline 0.104vw;
     color: #5274A5;
 }
-
 nav ul li a.active {
     text-decoration: underline 0.104vw;
 }
-
 .section1 {
     margin-top: 0;
     position: relative;
@@ -133,9 +122,6 @@ nav ul li a.active {
     z-index: 10;
 }
 
-.ritual-presono img {
-    display: none; /* Mantendo apenas o ícone de ritual */
-}
 
 .texto {
     max-width: 70%;

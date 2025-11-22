@@ -8,100 +8,110 @@
   <link rel="stylesheet" href="presono-style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
-<header>
-  <div class="logo">
-    <a href="index.html"> <img src="img/logo.png" alt="logo"></a>
-    <p>CicloZen</p>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="sono.html">Sono</a></li>
-      <li><a href="preSono.html" class="active">Pré-sono</a></li>
-      <li><a href="habitos.html">Hábitos</a></li>
-      <li><a href="questionario.html">Questionário</a></li>
-      <li><a href="sobreNos.html">Sobre nós</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <section class="section1">
-    <div class="container">
-      <h1>Pré-sono</h1>
-      <p>Para um sono ideal, devemos mudar nossas atitudes acordados</p>
+  <header>
+    <div class="logo">
+      <a href="index.html"> <img src="img/logo.png" alt="logo"></a>
+      <p>CicloZen</p>
     </div>
-  </section>
-  <section class="section2">
-    <div class="ritual-presono">
-      <img src="img/ritual.png" alt="ritual" class="ritual">
-      <div class="texto">
-        <h2>O ritual pré-sono</h2>
-        <p>
-          A forma como você se prepara antes de dormir é determinante para a
-          qualidade do descanso. O corpo precisa de sinais para entender que é
-          hora de desligar, e é nesse momento que o pré-sono faz diferença.
-        </p>
-      </div>
+    <nav id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sono.html">Sono</a></li>
+        <li><a href="preSono.html" class="active">Pré-sono</a></li>
+        <li><a href="habitos.html">Hábitos</a></li>
+        <li><a href="questionario.html">Questionário</a></li>
+        <li><a href="sobreNos.html">Sobre nós</a></li>
+      </ul>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
     </div>
-    <div class="privacao">
-      <div class="left">
-        <h1>Estratégias eficazes</h1>
-        <ul>
-          <li><strong>Higiene digital:</strong> evitar telas, pois a luz azul reduz a produção de melatonina.</li>
-          <li><strong>Ambiente preparado:</strong> quarto escuro, silencioso e com temperatura entre 18 e 22 °C</li>
-          <li><strong>Relaxamento físico:</strong> alongamentos leves ou yoga ajudam a reduzir a tensão muscular.</li>
-          <li><strong>Relaxamento mental:</strong> leitura leve, música calma, meditação guiada ou journaling.</li>
-          <li><strong>Banho morno:</strong> eleva a temperatura corporal, seguida de resfriamento que induz o sono.</li>
-        </ul>
+  </header>
+  <main>
+    <section class="section1">
+      <div class="container">
+        <h1>Pré-sono</h1>
+        <p>Para um sono ideal, devemos mudar nossas atitudes acordados</p>
       </div>
-      <div class="right">
-        <img src="img/muiedascoberta.png" alt="presono">
+    </section>
+    <section class="section2">
+      <div class="ritual-presono">
+        <img src="img/ritual.png" alt="ritual" class="ritual">
+        <div class="texto">
+          <h2>O ritual pré-sono</h2>
+          <p>
+            A forma como você se prepara antes de dormir é determinante para a
+            qualidade do descanso. O corpo precisa de sinais para entender que é
+            hora de desligar, e é nesse momento que o pré-sono faz diferença.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="comidas">
-      <div class="note">
-        <h3>Alimentação Pré-sono</h3>
-        <ul>
-          <li>Prefira alimentos leves e de fácil digestão (frutas, iogurte, chás calmantes como camomila ou erva-doce).
-          </li>
-          <li>Evite café, chá preto, chocolate e refrigerantes à noite.</li>
-          <li>O álcool, apesar de causar sonolência, prejudica o sono profundo.</li>
-        </ul>
+      <div class="privacao">
+        <div class="left">
+          <h1>Estratégias eficazes</h1>
+          <ul>
+            <li><strong>Higiene digital:</strong> evitar telas, pois a luz azul reduz a produção de melatonina.</li>
+            <li><strong>Ambiente preparado:</strong> quarto escuro, silencioso e com temperatura entre 18 e 22 °C</li>
+            <li><strong>Relaxamento físico:</strong> alongamentos leves ou yoga ajudam a reduzir a tensão muscular.</li>
+            <li><strong>Relaxamento mental:</strong> leitura leve, música calma, meditação guiada ou journaling.</li>
+            <li><strong>Banho morno:</strong> eleva a temperatura corporal, seguida de resfriamento que induz o sono.
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <img src="img/muiedascoberta.png" alt="presono">
+        </div>
       </div>
+      <div class="comidas">
+        <div class="note">
+          <h3>Alimentação Pré-sono</h3>
+          <ul>
+            <li>Prefira alimentos leves e de fácil digestão (frutas, iogurte, chás calmantes como camomila ou
+              erva-doce).
+            </li>
+            <li>Evite café, chá preto, chocolate e refrigerantes à noite.</li>
+            <li>O álcool, apesar de causar sonolência, prejudica o sono profundo.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <div class="left-footer">
+      <h2>Redes Sociais:</h2>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
+            <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/ciclo_zen_">
+            <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/enzobernardes/CicloZen">
+            <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
+          </a>
+        </li>
+      </ul>
     </div>
 
-  </section>
-
-<footer>
-  <div class="left-footer">
-    <h2>Redes Sociais:</h2>
-    <ul>
-      <li>
-        <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
-          <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://x.com/ciclo_zen_">
-          <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/enzobernardes/CicloZen">
-          <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="right-footer">
-    <img src="img/logo.png" alt="logo">
-    <p>CicloZen © Todos os direitos reservados.</p>
-  </div>
-</footer>
+    <div class="right-footer">
+      <img src="img/logo.png" alt="logo">
+      <p>CicloZen © Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  
 </body>
+
 </html>
