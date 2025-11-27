@@ -10,7 +10,7 @@
 
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,8 +54,75 @@ nav ul li a.active {
 }
 
 main {
-  margin: 10vw 0 10vw 0;
+  padding-top: 80px;
+  background-color: #e3edff;
 }
+
+body {
+
+  padding-bottom: 0px;
+}
+
+main section {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+main section h1 {
+  font-size: 4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: .3s;
+}
+
+form input:focus {
+  border-color: #6a5acd;
+  box-shadow: 0 0 5px rgba(106, 90, 205, 0.4);
+}
+
+form label {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+form button {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #6a5acd;
+  color: white;
+  transition: .3s;
+}
+
+form button:hover {
+  background-color: #5a4abc;
+}
+
 
 footer {
   display: flex;
@@ -96,4 +163,113 @@ footer {
   margin: 0;
   display: flex;
   gap: 25px;
+}
+
+#theme-toggle {
+  border: none;
+  background: none;
+  font-size: 26px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+
+body.dark main {
+  background-color: #0e0e16;
+}
+
+body.dark .quest h1 {
+  color: #ffffff;
+}
+
+body.dark .quest h1::after {
+  background: #9b7bff;
+  box-shadow: 0 0 10px rgba(155, 123, 255, 0.7);
+}
+
+
+body.dark form {
+  background: #1b1b1f;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  color: #f1f1f1;
+}
+
+body.dark form label {
+  color: #ffffff;
+}
+
+body.dark form input,
+body.dark form select {
+  background: #111115;
+  border: 2px solid #444;
+  color: white;
+}
+
+body.dark form input:focus,
+body.dark form select:focus {
+  border-color: #9b7bff;
+  box-shadow: 0 0 8px rgba(155, 123, 255, .6);
+}
+
+body.dark form button {
+  background-color: #9b7bff;
+}
+
+body.dark form button:hover {
+  background-color: #8c6dff;
+}
+
+/* === Responsividade === */
+
+
+@media (max-width: 600px) {
+
+  /* Header */
+  header .logo img {
+    width: 8vw;
+  }
+
+  nav ul li a {
+    font-size: 4vw;
+  }
+
+  #theme-toggle {
+    font-size: 8vw;
+  }
+
+  /* Section */
+  main section {
+    padding: 120px 20px;
+  }
+
+  .quest h1 {
+    font-size: 28px;
+  }
+
+  /* Form mais largo no mobile */
+  form {
+    width: 90%;
+    padding: 25px;
+    gap: 15px;
+  }
+
+  form input,
+  form select {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  form button {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-footer img {
+    width: 80px;
+  }
 }
