@@ -164,8 +164,8 @@ footer {
   display: flex;
   gap: 25px;
 }
-
-#theme-toggle {
+/* === tema escuro === */
+#temaEscuro{
   border: none;
   background: none;
   font-size: 26px;
@@ -224,7 +224,6 @@ body.dark form button:hover {
 
 @media (max-width: 600px) {
 
-  /* Header */
   header .logo img {
     width: 8vw;
   }
@@ -232,12 +231,9 @@ body.dark form button:hover {
   nav ul li a {
     font-size: 4vw;
   }
-
   #theme-toggle {
     font-size: 8vw;
   }
-
-  /* Section */
   main section {
     padding: 120px 20px;
   }
@@ -245,8 +241,6 @@ body.dark form button:hover {
   .quest h1 {
     font-size: 28px;
   }
-
-  /* Form mais largo no mobile */
   form {
     width: 90%;
     padding: 25px;

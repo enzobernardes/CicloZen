@@ -111,6 +111,15 @@
       <p>CicloZen © Todos os direitos reservados.</p>
     </div>
   </footer>
+  <script>
+    const btn = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    btn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      btn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+  </script>
   
 </body>
 

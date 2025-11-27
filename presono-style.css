@@ -7,6 +7,7 @@
     color: #02193B;
     font-family: Inter;
 }
+
 header {
     position: fixed;
     z-index: 1000;
@@ -18,36 +19,44 @@ header {
     width: 100%;
     box-shadow: 0 0.1vh 0.5vh rgba(0, 0, 0, 0.1);
 }
+
 header .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.52vw;
 }
+
 header .logo img {
     width: 2.08vw;
     min-width: 30px;
 }
+
 header .logo p {
     font-size: 1.25vw;
     font-weight: 800;
 }
+
 nav ul {
     display: flex;
     gap: 1.56vw;
     list-style: none;
 }
+
 nav ul li a {
     font-size: 1.04vw;
     transition: color 0.3s;
 }
+
 nav ul li a:hover {
     text-decoration: underline 0.104vw;
     color: #5274A5;
 }
+
 nav ul li a.active {
     text-decoration: underline 0.104vw;
 }
+
 .section1 {
     margin-top: 0;
     position: relative;
@@ -64,12 +73,14 @@ nav ul li a.active {
 }
 
 .section1 .container {
-    margin-bottom: 0; /* Removido o margin fixo */
+    margin-bottom: 0;
+    /* Removido o margin fixo */
 }
 
 .section1 h1 {
     font-weight: 800;
-    font-size: 6vw; /* Ajustado para unidade fluida */
+    font-size: 6vw;
+    /* Ajustado para unidade fluida */
     line-height: 1.1;
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -77,8 +88,10 @@ nav ul li a.active {
 
 .section1 p {
     font-weight: 800;
-    font-size: 1.2vw; /* Ajustado para unidade fluida */
-    width: 30%; /* Aumentado a largura para melhor leitura */
+    font-size: 1.2vw;
+    /* Ajustado para unidade fluida */
+    width: 30%;
+    /* Aumentado a largura para melhor leitura */
     line-height: 1.5;
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -90,7 +103,8 @@ nav ul li a.active {
     justify-content: center;
     align-items: center;
     padding: 4vw;
-    gap: 5vw; /* Aumentado o gap */
+    gap: 5vw;
+    /* Aumentado o gap */
     background-color: #f8f8f8;
 }
 
@@ -99,11 +113,13 @@ nav ul li a.active {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Alinhamento para acomodar o ritual */
+    justify-content: flex-end;
+    /* Alinhamento para acomodar o ritual */
     background: #fff;
     border-radius: 2vw;
     padding: 4vh 4vw;
-    padding-left: 20vw; /* Espaço para a imagem */
+    padding-left: 20vw;
+    /* Espaço para a imagem */
     width: 90%;
     box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.2);
     gap: 3vw;
@@ -114,9 +130,12 @@ nav ul li a.active {
 .ritual {
     position: absolute;
     left: 0;
-    top: 50%; /* Centraliza verticalmente o ponto de âncora */
-    transform: translate(-50%, -50%); /* Move 50% para fora (horizontal) e 50% para cima (vertical) */
-    width: 15vw; /* Tamanho ajustado */
+    top: 50%;
+    /* Centraliza verticalmente o ponto de âncora */
+    transform: translate(-50%, -50%);
+    /* Move 50% para fora (horizontal) e 50% para cima (vertical) */
+    width: 15vw;
+    /* Tamanho ajustado */
     height: auto;
     filter: drop-shadow(0.5vw 0.8vh 1.5vh rgba(0, 0, 0, 0.3));
     z-index: 10;
@@ -142,7 +161,8 @@ nav ul li a.active {
 /* ESTRATÉGIAS EFICAZES */
 .section2 .privacao {
     width: 90%;
-    height: 45vh; /* Altura ajustada */
+    height: 45vh;
+    /* Altura ajustada */
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -193,7 +213,8 @@ nav ul li a.active {
 /* ALIMENTAÇÃO PRÉ-SONO (Nota dobrada) */
 .comidas {
     width: 90%;
-    height: 70vh; /* Altura ajustada */
+    height: 70vh;
+    /* Altura ajustada */
     background-image: url('img/comida.png');
     background-position: center;
     background-size: cover;
@@ -201,8 +222,10 @@ nav ul li a.active {
     border-radius: 1vw;
     box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: flex-end; /* Alinha o conteúdo à direita */
-    align-items: center; /* Centraliza verticalmente a nota */
+    justify-content: flex-end;
+    /* Alinha o conteúdo à direita */
+    align-items: center;
+    /* Centraliza verticalmente a nota */
     padding: 5vw;
 }
 
@@ -212,8 +235,10 @@ nav ul li a.active {
     position: relative;
     justify-content: flex-start;
     background: #FFD54F;
-    padding: 2.5rem; /* Reduzido o padding */
-    width: 45%; /* Aumentado a largura relativa */
+    padding: 2.5rem;
+    /* Reduzido o padding */
+    width: 45%;
+    /* Aumentado a largura relativa */
     height: auto;
     min-height: 50%;
     border: 0.2vh solid #ccc;
@@ -242,19 +267,22 @@ nav ul li a.active {
 .note h3 {
     font-weight: 900;
     color: #545454;
-    font-size: 2vw; /* Ajustado para unidade fluida */
+    font-size: 2vw;
+    /* Ajustado para unidade fluida */
     margin-bottom: 2vh;
 
 }
-.note ul{
+
+.note ul {
     list-style-type: disc;
 }
 
-.note ul li{
+.note ul li {
     color: #545454;
     margin-left: 1vw;
     margin-top: 1.5vh;
-    font-size: 1vw; /* Ajustado para unidade fluida */
+    font-size: 1vw;
+    /* Ajustado para unidade fluida */
     line-height: 1.4;
 }
 
@@ -267,7 +295,8 @@ footer {
     background: linear-gradient(to bottom, #497FCF, #112C54);
     color: white;
 }
-.right-footer{
+
+.right-footer {
     display: flex;
     align-items: center;
     gap: 1.5vw;
@@ -308,43 +337,102 @@ footer {
 /* ------------------ RESPONSIVIDADE (MOBILE) ------------------ */
 
 @media (max-width: 1024px) {
+
     /* Ajustes para Tablets */
-    header .logo img { width: 4vw; }
-    header .logo p { font-size: 2vw; }
-    nav ul li a { font-size: 1.5vw; }
+    header .logo img {
+        width: 4vw;
+    }
 
-    .section1 h1 { font-size: 8vw; }
-    .section1 p { font-size: 2vw; width: 50%; }
+    header .logo p {
+        font-size: 2vw;
+    }
 
-    .ritual { width: 25vw; }
-    .ritual-presono { padding-left: 15vw; }
-    .texto h2 { font-size: 3vw; }
-    .texto p { font-size: 1.8vw; }
+    nav ul li a {
+        font-size: 1.5vw;
+    }
 
-    .left h1 { font-size: 5vw; }
-    .left ul li { font-size: 2vw; }
-    .section2 .privacao { height: 40vh; }
+    .section1 h1 {
+        font-size: 8vw;
+    }
 
-    .note { width: 60%; padding: 2rem; }
-    .note h3 { font-size: 4vw; }
-    .note ul li { font-size: 2.5vw; margin-left: 2vw; }
+    .section1 p {
+        font-size: 2vw;
+        width: 50%;
+    }
 
-    .right-footer img { width: 4vw; }
-    .right-footer p { font-size: 1.5vw; }
-    .left-footer h2 { font-size: 2.5vw; }
+    .ritual {
+        width: 25vw;
+    }
+
+    .ritual-presono {
+        padding-left: 15vw;
+    }
+
+    .texto h2 {
+        font-size: 3vw;
+    }
+
+    .texto p {
+        font-size: 1.8vw;
+    }
+
+    .left h1 {
+        font-size: 5vw;
+    }
+
+    .left ul li {
+        font-size: 2vw;
+    }
+
+    .section2 .privacao {
+        height: 40vh;
+    }
+
+    .note {
+        width: 60%;
+        padding: 2rem;
+    }
+
+    .note h3 {
+        font-size: 4vw;
+    }
+
+    .note ul li {
+        font-size: 2.5vw;
+        margin-left: 2vw;
+    }
+
+    .right-footer img {
+        width: 4vw;
+    }
+
+    .right-footer p {
+        font-size: 1.5vw;
+    }
+
+    .left-footer h2 {
+        font-size: 2.5vw;
+    }
 
 }
-
-
 @media (max-width: 600px) {
 
-    /* HEADER */
-    header { padding: 4vw 5vw; }
-    nav { display: none; }
-    header .logo img { width: 8vw; }
-    header .logo p { font-size: 6vw; }
+    header {
+        padding: 4vw 5vw;
+    }
 
-    /* HERO */
+    nav {
+        display: none;
+    }
+
+    header .logo img {
+        width: 8vw;
+    }
+
+    header .logo p {
+        font-size: 6vw;
+    }
+
     .section1 {
         height: 60vh;
         padding: 5vh 5vw;
@@ -361,7 +449,6 @@ footer {
         font-size: 4.5vw;
     }
 
-    /* RITUAL PRÉ-SONO */
     .section2 {
         padding: 5vw;
     }
@@ -397,7 +484,6 @@ footer {
         line-height: 1.5;
     }
 
-    /* ESTRATÉGIAS EFICAZES */
     .section2 .privacao {
         flex-direction: column;
         height: auto;
@@ -429,17 +515,16 @@ footer {
         height: 30vh;
     }
 
-    /* ALIMENTAÇÃO PRÉ-SONO (Nota dobrada) */
     .comidas {
-        height: 80vh; /* Altura ajustada */
+        height: 80vh;
         padding: 5vw;
-        justify-content: center; /* Centraliza no mobile */
+        justify-content: center;
         align-items: center;
-        background-position: 70% center; /* Ajusta o foco da imagem de fundo */
+        background-position: 70% center;
     }
 
     .note {
-        width: 90%; /* Ocupa quase a largura total */
+        width: 90%;
         min-height: 50vh;
         padding: 1.5rem;
     }
@@ -455,7 +540,6 @@ footer {
         margin-top: 1.5rem;
     }
 
-    /* FOOTER */
     footer {
         flex-direction: column;
         text-align: center;
@@ -478,7 +562,7 @@ footer {
         gap: 5vw;
     }
 
-    .right-footer{
+    .right-footer {
         flex-direction: column;
         gap: 1vh;
         padding: 0;

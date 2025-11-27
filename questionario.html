@@ -10,16 +10,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet>
-  <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
-
-
   <header>
     <div class="logo">
-      <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+      <a href="index.html"> <img src="img/logo.png" alt="logo"></a>
       <p>CicloZen</p>
     </div>
 
@@ -34,12 +32,8 @@
       </ul>
     </nav>
 
-
-    <button id="theme-toggle">🌙</button>
+    <button id="temaEscuro">🌙</button>
   </header>
-
-
-
   <main>
     <section class="quest">
       <h1>Questionário</h1>
@@ -49,29 +43,29 @@
         <select id="estudo" name="estudo">
           <option value="0">Nenhuma</option>
           <option value="1">Menos de 1</option>
-          <option value="2">Entre 1 e 3</option>
-          <option value="3">Entre 3 e 6</option>
-          <option value="4">Mais do que 6</option>
+          <option value="2">1–3 horas</option>
+          <option value="3">3–6 horas</option>
+          <option value="4">6+ horas</option>
         </select>
 
         <label for="exercicio">Quantas horas por dia você se exercita?</label>
         <select id="exercicio" name="exercicio">
           <option value="0">Nenhuma</option>
           <option value="1">Menos de 1</option>
-          <option value="2">Entre 1 e 3</option>
-          <option value="3">Entre 3 e 6</option>
-          <option value="4">Mais do que 6</option>
+          <option value="2">1–3 horas</option>
+          <option value="3">3–6 horas</option>
+          <option value="4">6+ horas</option>
         </select>
 
-        <label for="celular">Por quantas horas em média você passa no celular antes de dormir?</label>
+        <label for="celular">Quanto tempo usa o celular antes de dormir?</label>
         <select id="celular" name="celular">
-          <option value="0">Nenhuma</option>
-          <option value="1">Menos de 1</option>
-          <option value="2">Entre 1 e 3</option>
-          <option value="3">Mais do que 3</option>
+          <option value="0">Nenhum</option>
+          <option value="1">Menos de 1h</option>
+          <option value="2">1–3h</option>
+          <option value="3">3h+</option>
         </select>
 
-        <label for="cansado">Com que frequência você acorda cansado(a)?</label>
+        <label for="cansado">Com que frequência acorda cansado(a)?</label>
         <select id="cansado" name="cansado">
           <option value="0">Baixa</option>
           <option value="1">Média</option>
@@ -90,32 +84,27 @@
         <label for="adormecer">Minutos para adormecer:</label>
         <input type="number" id="adormecer" min="0" name="adormecer" placeholder="Ex: 20">
 
-        <label for="fins">Sua rotina de sono muda no fim de semana?</label>
+        <label for="fins">Sua rotina muda no fim de semana?</label>
         <select id="fins" name="fins">
           <option value="sim">Sim</option>
           <option value="nao">Não</option>
         </select>
 
-        <label for="relax">Faz algo para relaxar antes de dormir?</label>
+        <label for="relax">Você faz algo para relaxar antes de dormir?</label>
         <select id="relax" name="relax">
           <option value="sim">Sim</option>
           <option value="nao">Não</option>
         </select>
 
-        <button type="button" onclick="router()">Enviar</button>
+        <button type="button" onclick="calcularResultado()">Enviar</button>
       </form>
     </section>
-
     <section class="pg1">
-      <div>
-        <h1>dffjhvj</h1>
-      </div>
-      <button onclick="router()">Voltar</button>
+      <div></div>
+      <button onclick="voltar()">Voltar</button>
     </section>
+
   </main>
-
-
-
   <footer>
     <div class="left-footer">
       <h2>Redes Sociais:</h2>
@@ -134,23 +123,75 @@
       <p>CicloZen © Todos os direitos reservados.</p>
     </div>
   </footer>
-
-
-
   <script>
+
     const parte_I = document.querySelector(".quest");
     const parte_II = document.querySelector(".pg1");
     parte_II.style.display = "none";
 
-    function router() {
-      if (parte_I.style.display == "block") {
-        parte_I.style.display = "none";
-        parte_II.style.display = "block";
+    function calcularResultado() {
+
+      let score = 0;
+
+      score += Number(document.getElementById("estudo").value);
+      score += Number(document.getElementById("exercicio").value);
+      score += Number(document.getElementById("celular").value);
+      score += Number(document.getElementById("cansado").value);
+
+      let dormir = document.getElementById("dormir").value;
+      let acordar = document.getElementById("acordar").value;
+
+      if (dormir >= "23:00") score += 2;
+      if (dormir >= "01:00") score += 3;
+      if (acordar <= "06:00") score += 2;
+
+      let horasSono = Number(document.getElementById("sono").value);
+      if (horasSono < 6) score += 3;
+      else if (horasSono < 7) score += 2;
+
+      let adormecer = Number(document.getElementById("adormecer").value);
+      if (adormecer > 30) score += 2;
+      if (adormecer > 60) score += 3;
+
+      let fins = document.getElementById("fins").value;
+      if (fins === "sim") score += 1;
+
+      let relax = document.getElementById("relax").value;
+      if (relax === "nao") score += 2;
+
+      let mensagem = "";
+
+      if (score <= 6) {
+        mensagem = `
+          <h2 style="color:#67b26f">Seu Sono Está Ótimo!</h2>
+          <p>Sua rotina está equilibrada e saudável. Continue assim!</p>
+        `;
       }
+      else if (score <= 12) {
+        mensagem = `
+          <h2 style="color:#e5b143">Sono Regular</h2>
+          <p>Alguns hábitos podem melhorar. Tente dormir mais cedo e reduzir telas antes de dormir.</p>
+        `;
+      }
+      else {
+        mensagem = `
+          <h2 style="color:#d9534f">Sono Prejudicado</h2>
+          <p>Seu padrão de sono pode estar afetando sua saúde. Ajustar horários e rotinas vai te ajudar muito.</p>
+        `;
+      }
+
+      document.querySelector(".pg1 div").innerHTML = mensagem;
+
+      parte_I.style.display = "none";
+      parte_II.style.display = "block";
     }
 
+    function voltar() {
+      parte_I.style.display = "block";
+      parte_II.style.display = "none";
+    }
 
-    const btn = document.getElementById("theme-toggle");
+    const btn = document.getElementById("temaEscuro");
     const body = document.body;
 
     btn.addEventListener("click", () => {
