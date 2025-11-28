@@ -125,6 +125,20 @@
         </ul>
       </div>
     </section>
+    <section class="video-section">
+      <div class="video-container">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/watch?v=j7pT7mZmsW8" title="Vídeo CicloZen" allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <div class="video-caption">
+          <div class="title">Assista: Dicas para um sono melhor</div>
+          <div class="controls">
+            <a href="#" onclick="openVideoInNewTab(event)">Abrir em nova aba</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
     <div class="left-footer">
@@ -153,7 +167,15 @@
       <p>CicloZen © Todos os direitos reservados.</p>
     </div>
   </footer>
-
+  <script>
+    function openVideoInNewTab(e) {
+      e.preventDefault();
+      const iframe = document.querySelector('.video-wrapper iframe');
+      if (!iframe) return;
+      const src = iframe.src;
+      window.open(src, '_blank', 'noopener');
+    }
+  </script>
 </body>
 
 </html>
