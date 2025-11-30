@@ -92,7 +92,7 @@ nav ul li a.active {
 
 .section2 .box {
     width: 95%;
-    height: 46.3vh;
+    min-height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -104,8 +104,11 @@ nav ul li a.active {
     border-radius: 1vw;
     overflow: hidden;
     box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.45);
-}
 
+}
+.section2 .box h1{
+    padding: 5vw 0 2vw 0;
+}
 .box .div {
     margin: 2.6vw 2.6vw;
 }
