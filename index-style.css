@@ -3,6 +3,8 @@
     text-decoration: none;
     color: #02193B;
     font-family: Inter;
+}
+html {
     scrollbar-width: none;
 }
 
