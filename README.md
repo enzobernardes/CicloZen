@@ -1,1 +1,1 @@
-# Link do site [CicloZen](https://github.com/enzobernardes/CicloZen.git)
+# Link do site [CicloZen](https://enzobernardes.github.io/CicloZen/)
