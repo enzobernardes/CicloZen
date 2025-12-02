@@ -10,13 +10,14 @@
 
 header {
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.04vh 2.6vw;
     background-color: white;
     width: 100%;
+    box-shadow: 0 0.1vh 0.5vh rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
@@ -28,6 +29,7 @@ header .logo {
 
 header .logo img {
     width: 2.08vw;
+    min-width: 30px;
 }
 
 header .logo p {
@@ -43,10 +45,12 @@ nav ul {
 
 nav ul li a {
     font-size: 1.04vw;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
     text-decoration: underline 0.104vw;
+    color: #5274A5;
 }
 
 nav ul li a.active {
@@ -244,49 +248,52 @@ nav ul li a.active {
     font-size: 2rem;
 
 }
-.note ul li{
+
+.note ul li {
     color: #545454;
     margin-left: 0.7rem;
     margin-top: 2rem;
     font-size: 1.2rem;
 
 }
+
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: linear-gradient(to bottom, #497FCF, #112C54);
-  color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #497FCF, #112C54);
+    color: white;
 }
-.right-footer{
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  padding: 0 2vw;
+
+.right-footer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0 2vw;
 }
 
 .right-footer p {
-  color: white;
+    color: white;
 }
 
 .left-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; 
-  padding: 1vw 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1vw 2vw;
 }
 
 .left-footer h2 {
-  color: white;
-  margin-bottom: 1rem;
-  font-size: 30px;
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 30px;
 }
 
 .left-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
 }
