@@ -10,13 +10,14 @@
 
 header {
   position: fixed;
-  z-index: 10;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.04vh 2.6vw;
   background-color: white;
   width: 100%;
+  box-shadow: 0 0.1vh 0.5vh rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
@@ -28,6 +29,7 @@ header .logo {
 
 header .logo img {
   width: 2.08vw;
+  min-width: 30px;
 }
 
 header .logo p {
@@ -43,10 +45,12 @@ nav ul {
 
 nav ul li a {
   font-size: 1.04vw;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
   text-decoration: underline 0.104vw;
+  color: #5274A5;
 }
 
 nav ul li a.active {
@@ -55,7 +59,7 @@ nav ul li a.active {
 
 main {
   padding-top: 80px;
-  background-color: #e3edff;
+  background-color: #f8f8f8;
 }
 
 body {
@@ -64,7 +68,7 @@ body {
 }
 
 main section {
-  padding: 80px 0;
+  padding: 60px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -86,7 +90,7 @@ form {
   padding: 20px;
   background: #f7f7f7;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 form input {
@@ -96,11 +100,6 @@ form input {
   border-radius: 8px;
   outline: none;
   transition: .3s;
-}
-
-form input:focus {
-  border-color: #6a5acd;
-  box-shadow: 0 0 5px rgba(106, 90, 205, 0.4);
 }
 
 form label {
@@ -114,15 +113,27 @@ form button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #6a5acd;
+  background-color: #02193B;
   color: white;
   transition: .3s;
 }
 
 form button:hover {
-  background-color: #5a4abc;
+  background-color: #497FCF;
 }
 
+.pg1 button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: #02193B;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
+}
+
+.pg1 button:hover {
+  background: #497FCF;
+}
 
 footer {
   display: flex;
@@ -164,63 +175,6 @@ footer {
   display: flex;
   gap: 25px;
 }
-/* === tema escuro === */
-#temaEscuro{
-  border: none;
-  background: none;
-  font-size: 26px;
-  cursor: pointer;
-  margin-left: 20px;
-}
-
-
-body.dark main {
-  background-color: #0e0e16;
-}
-
-body.dark .quest h1 {
-  color: #ffffff;
-}
-
-body.dark .quest h1::after {
-  background: #9b7bff;
-  box-shadow: 0 0 10px rgba(155, 123, 255, 0.7);
-}
-
-
-body.dark form {
-  background: #1b1b1f;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  color: #f1f1f1;
-}
-
-body.dark form label {
-  color: #ffffff;
-}
-
-body.dark form input,
-body.dark form select {
-  background: #111115;
-  border: 2px solid #444;
-  color: white;
-}
-
-body.dark form input:focus,
-body.dark form select:focus {
-  border-color: #9b7bff;
-  box-shadow: 0 0 8px rgba(155, 123, 255, .6);
-}
-
-body.dark form button {
-  background-color: #9b7bff;
-}
-
-body.dark form button:hover {
-  background-color: #8c6dff;
-}
-
-/* === Responsividade === */
-
 
 @media (max-width: 600px) {
 
@@ -231,9 +185,11 @@ body.dark form button:hover {
   nav ul li a {
     font-size: 4vw;
   }
+
   #theme-toggle {
     font-size: 8vw;
   }
+
   main section {
     padding: 120px 20px;
   }
@@ -241,6 +197,7 @@ body.dark form button:hover {
   .quest h1 {
     font-size: 28px;
   }
+
   form {
     width: 90%;
     padding: 25px;

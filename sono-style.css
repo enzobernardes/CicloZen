@@ -110,18 +110,13 @@ nav ul li a.active {
     box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.3);
     gap: 2vw;
     overflow: visible;
-    /* astronauta pode "sair" da div */
 }
 
 .astronauta {
     position: absolute;
     left: -5vw;
-    /* joga para fora da div */
-    /* deixa a parte de baixo "saindo" */
     width: 18vw;
-    /* tamanho proporcional à largura da tela */
     height: auto;
-    /* mantém proporção da imagem */
     filter: drop-shadow(0.5vw 0.8vh 1.5vh rgba(0, 0, 0, 0.3));
 }
 
@@ -154,7 +149,6 @@ nav ul li a.active {
     width: 95%;
     height: 80vh;
     background-position: 70% 5%;
-    /* define a parte visível */
     border-radius: 2rem;
     display: flex;
     flex-direction: column;

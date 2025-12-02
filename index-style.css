@@ -1,18 +1,23 @@
 * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     text-decoration: none;
     color: #02193B;
     font-family: Inter;
 }
-html {
-    scrollbar-width: none;
-}
 
 header {
+    position: fixed;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1.04vh 2.6vw;
+    background-color: white;
     width: 100%;
+    box-shadow: 0 0.1vh 0.5vh rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
@@ -311,147 +316,107 @@ nav ul li a.active {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-footer {
+.video-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-color: #f8f8f8;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(2, 25, 59, 0.12);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.video-caption {
+    padding: 1rem 1.25rem;
+    background-color: #fafafa;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 4vw;
-    background: linear-gradient(to bottom, #497FCF, #112C54);
+    gap: 1rem;
+    font-size: 0.95rem;
+}
+
+.video-caption .title {
+    font-weight: 700;
+    color: #02193B;
+}
+
+.video-caption .controls a {
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background: #02193B;
     color: white;
+    font-weight: 600;
+    transition: background-color 0.25s ease;
 }
 
-.right-footer {
-    display: flex;
-    align-items: center;
-    gap: 1.5vw;
-    padding: 0;
-}
+.video-caption .controls a:hover {
+    background: #497FCF;
+} 
 
-.right-footer img {
-    width: 2.5vw;
-    min-width: 40px;
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, #497FCF, #112C54);
+  color: white;
+}
+.right-footer{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 2vw;
 }
 
 .right-footer p {
-    color: white;
-    font-size: 0.9vw;
+  color: white;
 }
 
 .left-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  padding: 1vw 2vw;
 }
 
 .left-footer h2 {
-    color: white;
-    margin-bottom: 1rem;
-    font-size: 1.5vw;
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 30px;
 }
 
 .left-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 1.5vw;
-}
-
-/* resposividade */
-
-@media (max-width: 1024px) {
-    header .logo img {
-        width: 4vw;
-    }
-
-    header .logo p {
-        font-size: 2vw;
-    }
-
-    nav ul li a {
-        font-size: 1.5vw;
-    }
-
-    .section1 h1 {
-        font-size: 8vw;
-        width: 70%;
-    }
-
-    .section1 p {
-        font-size: 2.5vw;
-        width: 50%;
-    }
-
-    .sono .content-sono {
-        width: 70%;
-    }
-
-    .section2 .sono h1 {
-        font-size: 5vw;
-    }
-
-    .section2 .sono p,
-    .section2 .sono ul li {
-        font-size: 2.5vw;
-    }
-
-    .left h1 {
-        font-size: 5vw;
-    }
-
-    .left p,
-    .left ul li {
-        font-size: 2.5vw;
-    }
-
-    .presono .right img {
-        object-fit: contain;
-    }
-
-    .bonshabitos h1 {
-        font-size: 5vw;
-    }
-
-    .bonshabitos ul li {
-        max-width: 25vw;
-    }
-
-    .bonshabitos ul li img {
-        height: 10vw;
-        width: 10vw;
-    }
-
-    .bonshabitos ul li p {
-        font-size: 2vw;
-    }
-
-    .sintomas h1 {
-        font-size: 5vw;
-    }
-
-    .sintomas ul li {
-        font-size: 2vw;
-    }
-
-    .right-footer img {
-        width: 4vw;
-    }
-
-    .right-footer p {
-        font-size: 1.5vw;
-    }
-
-    .left-footer h2 {
-        font-size: 2.5vw;
-    }
-}
-
-.menu-icon {
-    display: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    z-index: 1001;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 25px;
 }
 
 @media (max-width: 600px) {
@@ -696,75 +661,14 @@ footer {
     .right-footer p {
         font-size: 3vw;
     }
-}
-
-/* === video === */
- .video-section {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      padding: 4rem 2rem;
-      background-color: #ffffff;
-    }
-
-    .video-container {
-      width: 100%;
-      max-width: 1100px;
-      border-radius: 1rem;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(2, 25, 59, 0.12);
-    }
-
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-    }
-
-    .video-wrapper iframe,
-    .video-wrapper video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
+    
+    .video-section {
+        padding: 2rem 1rem;
     }
 
     .video-caption {
-      padding: 1rem 1.25rem;
-      background-color: #fafafa;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.95rem;
-    }
-
-    .video-caption .title {
-      font-weight: 700;
-      color: #02193B;
-    }
-
-    .video-caption .controls a {
-      text-decoration: none;
-      padding: 0.5rem 0.75rem;
-      border-radius: 0.5rem;
-      background: linear-gradient(90deg, #497FCF, #112C54);
-      color: white;
-      font-weight: 600;
-    }
-
-    @media (max-width: 600px) {
-      .video-section {
-        padding: 2rem 1rem;
-      }
-
-      .video-caption {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
-      }
     }
+}
