@@ -17,12 +17,11 @@
 <body>
   <header>
     <div class="logo">
-      <a href="index.html"> <img src="img/logo.png" alt="logo"></a>
-      <p>CicloZen</p>
+      <a href="index.html"> <img src="img/logo.png" alt="logo"> <p>CicloZen</p></a>
     </div>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="sono.html">Sono</a></li>
         <li><a href="preSono.html">Pré-sono</a></li>
         <li><a href="habitos.html">Hábitos</a></li>
@@ -65,13 +64,13 @@
     </div>
     <div class="privacao">
       <div class="left">
-        <h1>Estratégias eficazes</h1>
+        <h2>Estratégias eficazes</h2>
         <ul>
-          <li><strong>Higiene digital:</strong> evitar telas, pois a luz azul reduz a produção de melatonina.</li>
-          <li><strong>Ambiente preparado:</strong> quarto escuro, silencioso e com temperatura entre 18 e 22 °C</li>
-          <li><strong>Relaxamento físico:</strong> alongamentos leves ou yoga ajudam a reduzir a tensão muscular.</li>
-          <li><strong>Relaxamento mental:</strong> leitura leve, música calma, meditação guiada ou journaling.</li>
-          <li><strong>Banho morno:</strong> eleva a temperatura corporal, seguida de resfriamento que induz o sono.</li>
+          <li><span class="negrito">Higiene digital:</span> evitar telas, pois a luz azul reduz a produção de melatonina.</li>
+          <li><span class="negrito">Ambiente preparado:</span> quarto escuro, silencioso e com temperatura entre 18 e 22 °C</li>
+          <li><span class="negrito">Relaxamento físico:</span> alongamentos leves ou yoga ajudam a reduzir a tensão muscular.</li>
+          <li><span class="negrito">Relaxamento mental:</span> leitura leve, música calma, meditação guiada ou journaling.</li>
+          <li><span class="negrito">Banho morno:</span> eleva a temperatura corporal, seguida de resfriamento que induz o sono.</li>
         </ul>
       </div>
       <div class="right">
@@ -97,17 +96,17 @@
       <ul>
         <li>
           <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
-            <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
+            <span class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></span>
           </a>
         </li>
         <li>
           <a href="https://x.com/ciclo_zen_">
-            <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
+            <span class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></span>
           </a>
         </li>
         <li>
           <a href="https://github.com/enzobernardes/CicloZen">
-            <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
+            <span class="fa-brands fa-2x fa-github" style="color: #ffffff;"></span>
           </a>
         </li>
       </ul>
@@ -118,6 +117,20 @@
       <p>CicloZen © Todos os direitos reservados.</p>
     </div>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach(link => {
+      const linkPage = link.getAttribute("href");
+      link.classList.remove("active");
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+  </script>
 </body>
 
 </html>

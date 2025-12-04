@@ -31,7 +31,11 @@ header .logo img {
     width: 2.08vw;
     min-width: 30px;
 }
-
+header .logo a{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
 header .logo p {
     font-size: 1.25vw;
     font-weight: 800;
@@ -165,7 +169,7 @@ nav ul li a.active {
     box-shadow: 0 0.8vh 2.4vh rgba(0, 0, 0, 0.45);
 }
 
-.section2 .fases h1 {
+.section2 .fases h2 {
 
     font-weight: 900;
     font-style: Black;
@@ -187,7 +191,7 @@ nav ul li a.active {
     width: 15%;
 }
 
-.fases ul li h2 {
+.fases ul li h3 {
     color: white;
     font-weight: 900;
     font-style: Black;
@@ -220,7 +224,7 @@ nav ul li a.active {
     padding: 2vw;
 }
 
-.left h1 {
+.left h2 {
 
     font-weight: 900;
     font-style: Black;
@@ -266,7 +270,7 @@ nav ul li a.active {
     gap: 5vh;
 }
 
-.bonshabitos h1 {
+.bonshabitos h2 {
     font-weight: 900;
     font-size: 3vw;
     margin-bottom: 2.5rem;
@@ -476,7 +480,7 @@ footer {
         gap: 4vh;
     }
 
-    .section2 .fases h1 {
+    .section2 .fases h2 {
         font-size: 2.5rem;
         text-align: center;
     }
@@ -493,7 +497,7 @@ footer {
         text-align: center;
     }
 
-    .fases ul li h2 {
+    .fases ul li h3 {
         font-size: 4rem;
     }
 
@@ -516,7 +520,7 @@ footer {
         padding: 5vw;
     }
 
-    .left h1 {
+    .left h2 {
         font-size: 8vw;
         text-align: center;
     }
@@ -539,7 +543,7 @@ footer {
         gap: 5vh;
     }
 
-    .bonshabitos h1 {
+    .bonshabitos h2 {
         font-size: 8vw;
         text-align: center;
     }

@@ -31,7 +31,14 @@ header .logo img {
     width: 2.08vw;
     min-width: 30px;
 }
-
+header .logo a{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+.negrito{
+    font-weight: bold;
+}
 header .logo p {
     font-size: 1.25vw;
     font-weight: 800;
@@ -163,7 +170,7 @@ nav ul li a.active {
     padding: 3rem;
 }
 
-.left h1 {
+.left h2 {
 
     font-weight: 900;
     font-size: 3.33vw;
@@ -461,7 +468,7 @@ footer {
         padding: 6vw;
     }
 
-    .left h1 {
+    .left h2 {
         font-size: 8vw;
         text-align: center;
     }

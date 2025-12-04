@@ -17,12 +17,11 @@
 <body>
   <header>
     <div class="logo">
-      <a href="index.html"> <img src="img/logo.png" alt="logo"></a>
-      <p>CicloZen</p>
+      <a href="index.html"> <img src="img/logo.png" alt="logo"> <p>CicloZen</p></a>
     </div>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="sono.html">Sono</a></li>
         <li><a href="preSono.html">Pré-sono</a></li>
         <li><a href="habitos.html">Hábitos</a></li>
@@ -53,7 +52,7 @@
     <section class="section2">
       <div class="sono">
         <div class="content-sono">
-          <h1>Sono</h1>
+          <h2>Sono</h2>
           <p>Por que o sono é essencial?</p>
           <ul>
             <li>Fortalece o sistema imunológico.</li>
@@ -69,27 +68,27 @@
       </div>
       <div class="presono">
         <div class="left">
-          <h1>Pré-sono</h1>
+          <h2>Pré-sono</h2>
           <p>Como preparar corpo e mente</p>
           <ul>
             <li>
-              <strong>Desconexão digital:</strong> Evitar telas 1–2h antes de
+              <span class="negrito">Desconexão digital:</span> Evitar telas 1–2h antes de
               dormir.
             </li>
             <li>
-              <strong>Ambiente preparado:</strong> Quarto escuro, silencioso,
+              <span class="negrito">Ambiente preparado:</span> Quarto escuro, silencioso,
               ventilado.
             </li>
             <li>
-              <strong>Rituais relaxantes:</strong> Banho morno, alongamentos,
+              <span class="negrito">Rituais relaxantes:</span> Banho morno, alongamentos,
               respiração, aromaterapia.
             </li>
             <li>
-              <strong>Alimentação leve:</strong> Refeições simples, sem cafeína
+              <span class="negrito">Alimentação leve:</span> Refeições simples, sem cafeína
               ou álcool à noite.
             </li>
             <li>
-              <strong>Horários regulares:</strong> Dormir e acordar sempre no
+              <span class="negrito">Horários regulares:</span> Dormir e acordar sempre no
               mesmo horário.
             </li>
           </ul>
@@ -99,36 +98,36 @@
         </div>
       </div>
       <div class="bonshabitos">
-        <h1>Bons Hábitos</h1>
+        <h2>Bons Hábitos</h2>
         <ul>
           <li>
             <img src="img/Vector.png" alt="">
             <p>Rotina consistente</p>
-            <p><strong>&</strong></p>
+            <p><span class="negrito">&</span></p>
             <p>Ambiente adequado</p>
           </li>
           <li>
             <img src="img/Vector-1.png" alt="">
             <p>Evitar eletrônicos</p>
-            <p><strong>&</strong></p>
+            <p><span class="negrito">&</span></p>
             <p>Cochilos controlados</p>
           </li>
           <li>
             <img src="img/Vector-2.png" alt="">
             <p>Alimentção leve</p>
-            <p><strong>&</strong></p>
+            <p><span class="negrito">&</span></p>
             <p>Atividade física</p>
           </li>
           <li>
             <img src="img/Vector-3.png" alt="">
             <p>Rituais relaxantes</p>
-            <p><strong>&</strong></p>
+            <p><span class="negrito">&</span></p>
             <p>Controle do Estresse</p>
           </li>
         </ul>
       </div>
       <div class="sintomas">
-        <h1>Procure um profissional caso apresente:</h1>
+        <h2>Procure um profissional caso apresente:</h2>
         <ul>
           <li>Insônia persistente</li>
           <li>Apneia do sono, bruxismo, narcolepsia.</li>
@@ -159,17 +158,17 @@
       <ul>
         <li>
           <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
-            <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
+            <span class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></span>
           </a>
         </li>
         <li>
           <a href="https://x.com/ciclo_zen_">
-            <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
+            <span class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></span>
           </a>
         </li>
         <li>
           <a href="https://github.com/enzobernardes/CicloZen">
-            <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
+            <span class="fa-brands fa-2x fa-github" style="color: #ffffff;"></span>
           </a>
         </li>
       </ul>
@@ -188,6 +187,18 @@
       const src = iframe.src;
       window.open(src, '_blank', 'noopener');
     }
+    document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach(link => {
+      const linkPage = link.getAttribute("href");
+      link.classList.remove("active");
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
   </script>
 </body>
 

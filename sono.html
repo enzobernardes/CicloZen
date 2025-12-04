@@ -17,12 +17,11 @@
 <body>
   <header>
     <div class="logo">
-      <a href="index.html"> <img src="img/logo.png" alt="logo"></a>
-      <p>CicloZen</p>
+      <a href="index.html"> <img src="img/logo.png" alt="logo"> <p>CicloZen</p></a>
     </div>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="sono.html">Sono</a></li>
         <li><a href="preSono.html">Pré-sono</a></li>
         <li><a href="habitos.html">Hábitos</a></li>
@@ -35,6 +34,7 @@
       <summary>Menu</summary>
 
       <div class="menu">
+        
         <a href="index.html">Home</a>
         <a href="sono.html">Sono</a>
         <a href="preSono.html">Pré-sono</a>
@@ -65,21 +65,21 @@
         </div>
       </div>
       <div class="fases">
-        <h1>Fases do sono</h1>
+        <h2>Fases do sono</h2>
         <ul>
           <li>
-            <h2>1.</h2>
+            <h3>1.</h3>
             <p>
               NREM (leve): corpo começa a relaxar, batimentos e respiração
               diminuem.
             </p>
           </li>
           <li>
-            <h2>2.</h2>
+            <h3>2.</h3>
             <p>Sono profundo: restauração física e liberação de hormônios.</p>
           </li>
           <li>
-            <h2>3.</h2>
+            <h3>3.</h3>
             <p>
               REM (movimento rápido dos olhos): atividade cerebral intensa,
               sonhos e fixação da memória.
@@ -89,7 +89,7 @@
       </div>
       <div class="privacao">
         <div class="left">
-          <h1>Consequências da privação do sono:</h1>
+          <h2>Consequências da privação do sono:</h2>
           <ul>
             <li>Diminuição da imunidade</li>
             <li>Problemas de memória e aprendizado</li>
@@ -103,7 +103,7 @@
         </div>
       </div>
       <div class="bonshabitos">
-        <h1>Dormir é uma necessidade biológica universal</h1>
+        <h2>Dormir é uma necessidade biológica universal</h2>
         <ul>
           <li>
             <img src="img/Vector.png" alt="">
@@ -131,17 +131,17 @@
       <ul>
         <li>
           <a href="https://www.instagram.com/ciclo.zen_/?next=%2F">
-            <i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
+            <span class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></span>
           </a>
         </li>
         <li>
           <a href="https://x.com/ciclo_zen_">
-            <i class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></i>
+            <span class="fa-brands fa-2x fa-x-twitter" style="color: #ffffff;"></span>
           </a>
         </li>
         <li>
           <a href="https://github.com/enzobernardes/CicloZen">
-            <i class="fa-brands fa-2x fa-github" style="color: #ffffff;"></i>
+            <span class="fa-brands fa-2x fa-github" style="color: #ffffff;"></span>
           </a>
         </li>
       </ul>
@@ -164,7 +164,18 @@
       document.getElementById('mobile-menu').classList.remove('open');
     });
   });
-  
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach(link => {
+      const linkPage = link.getAttribute("href");
+      link.classList.remove("active");
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
 </script>
 </body>
 

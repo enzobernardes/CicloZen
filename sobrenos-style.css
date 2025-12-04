@@ -40,6 +40,11 @@ header .logo img {
     width: 2.08vw;
     min-width: 30px;
 }
+header .logo a{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
 header .logo p {
     font-size: 1.25vw;
     font-weight: 800;

@@ -26,12 +26,18 @@ header .logo {
     justify-content: center;
     gap: 0.52vw;
 }
-
+.negrito{
+    font-weight: bold;
+}
 header .logo img {
     width: 2.08vw;
     min-width: 30px;
 }
-
+header .logo a{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
 header .logo p {
     font-size: 1.25vw;
     font-weight: 800;
@@ -130,7 +136,7 @@ nav ul li a.active {
     text-align: right;
 }
 
-.section2 .sono h1 {
+.section2 .sono h2 {
     font-size: 3vw;
     color: white;
     margin-bottom: 2vh;
@@ -185,7 +191,7 @@ nav ul li a.active {
     width: 55%;
 }
 
-.left h1 {
+.left h2 {
     font-size: 3vw;
     margin-bottom: 2vh;
 }
@@ -233,7 +239,7 @@ nav ul li a.active {
     max-width: 1200px;
 }
 
-.bonshabitos h1 {
+.bonshabitos h2 {
     width: auto;
     font-size: 3vw;
     text-align: center;
@@ -294,7 +300,7 @@ nav ul li a.active {
     margin-bottom: 5rem;
 }
 
-.sintomas h1 {
+.sintomas h2 {
     font-weight: 900;
     font-size: 3vw;
     color: white;
@@ -582,7 +588,7 @@ footer {
         border-radius: 0.83vw;
     }
 
-    .section2 .sono h1 {
+    .section2 .sono h2 {
         font-size: 8vw;
         margin-bottom: 2vh;
     }
@@ -623,7 +629,7 @@ footer {
         width: 100%;
     }
 
-    .left h1 {
+    .left h2 {
         font-size: 8vw;
         margin-bottom: 1.5vh;
     }
@@ -659,7 +665,7 @@ footer {
         gap: 2vh;
     }
 
-    .bonshabitos h1 {
+    .bonshabitos h2 {
         font-size: 9vw;
         width: 100%;
     }
@@ -699,7 +705,7 @@ footer {
         margin-bottom: 3rem;
     }
 
-    .sintomas h1 {
+    .sintomas h2 {
         font-size: 7vw;
         line-height: 1.2;
     }
