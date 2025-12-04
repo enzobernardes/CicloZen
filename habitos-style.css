@@ -7,7 +7,6 @@
     color: #02193B;
     font-family: Inter;
 }
-
 header {
     position: fixed;
     z-index: 1000;
@@ -322,4 +321,246 @@ footer {
     margin: 0;
     display: flex;
     gap: 25px;
+}
+.dropdown{
+    display: none;
+}
+@media (max-width: 768px) {
+
+    header {
+        height: 60px;
+        padding: 10px 20px;
+    }
+
+    header .logo img {
+        width: 30px;
+    }
+
+    header .logo p {
+        font-size: 5vw;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .dropdown {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 120px;
+    }
+
+
+    details {
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    summary {
+        list-style: none;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    summary::after {
+        content: "▼";
+        float: right;
+        transition: transform 0.2s;
+        font-size: 12px;
+        opacity: 0.7;
+    }
+
+    details[open] summary::after {
+        transform: rotate(-180deg);
+    }
+
+    .menu {
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 15px;
+        gap: 10px;
+        border-radius: 6px;
+        animation: fade 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .menu a {
+        color: #02193B;
+        font-weight: 600;
+        padding: 8px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu a:last-child {
+        border-bottom: none;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; transform: translateY(-5px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section1 {
+        padding: 2rem 1.5rem;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-position: center top;
+    }
+
+    .section1 h1 {
+        font-size: 3rem;
+        line-height: 110%;
+    }
+
+    .section1 p {
+        width: 100%;
+        font-size: 1.2rem;
+        margin-bottom: 5rem;
+    }
+    .beneficios {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        padding-left: 1rem;
+        text-align: center;
+    }
+
+    .astronauta {
+        position: static;
+        width: 40vw;
+        margin-bottom: 2rem;
+    }
+
+    .beneficios img {
+        width: 60vw;
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+    .texto h2 {
+        font-size: 1.6rem;
+    }
+
+    .texto p {
+        font-size: 1rem;
+    }
+    .section2 .privacao {
+        flex-direction: column;
+        height: auto;
+        border-radius: 3vw;
+    }
+
+    .privacao .left {
+        padding: 1.5rem;
+    }
+
+    .left h1 {
+        font-size: 2rem;
+    }
+
+    .left p {
+        font-size: 1rem;
+    }
+
+    .left ul li {
+        font-size: 0.9rem;
+    }
+
+    .privacao .right img {
+        width: 100%;
+        height: auto;
+        border-radius: 0 0 3vw 3vw;
+    }
+    .sintomas {
+        height: auto;
+        padding: 3rem 1rem;
+        background-position: center;
+        margin-top: 0;
+    }
+
+    .sintomas h1 {
+        font-size: 2.2rem;
+    }
+
+    .sintomas ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sintomas ul li {
+        font-size: 1rem;
+        text-align: start;
+    }
+    .comment {
+        width: 90%;
+        padding: 1.5rem;
+        position: static;
+        margin: 2rem auto;
+        gap: 1rem;
+    }
+
+    .comment .profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .comment .fala {
+        margin-left: 0;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .comment h3 {
+        font-size: 1.3rem;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 5vw;
+        gap: 3vh;
+    }
+
+    .left-footer {
+        padding: 0;
+        align-items: center;
+    }
+
+    .left-footer h2 {
+        font-size: 5vw;
+        margin-bottom: 1.5vh;
+    }
+
+    .left-footer ul {
+        justify-content: center;
+        gap: 5vw;
+    }
+
+    .right-footer {
+        flex-direction: column;
+        gap: 1vh;
+        padding: 0;
+    }
+
+    .right-footer img {
+        width: 8vw;
+    }
+
+    .right-footer p {
+        font-size: 3vw;
+    }
 }

@@ -330,3 +330,261 @@ footer {
     display: flex;
     gap: 25px;
 }
+.dropdown {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 60px;
+        padding: 10px 20px;
+    }
+
+    header .logo img {
+        width: 30px;
+    }
+
+    header .logo p {
+        font-size: 5vw;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .dropdown {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 120px;
+    }
+    details {
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    summary {
+        list-style: none;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    summary::after {
+        content: "▼";
+        float: right;
+        transition: transform 0.2s;
+        font-size: 12px;
+        opacity: 0.7;
+    }
+
+    details[open] summary::after {
+        transform: rotate(-180deg);
+    }
+
+    .menu {
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 15px;
+        gap: 10px;
+        border-radius: 6px;
+        animation: fade 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .menu a {
+        color: #02193B;
+        font-weight: 600;
+        padding: 8px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu a:last-child {
+        border-bottom: none;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; transform: translateY(-5px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+    .section1 {
+        height: 50vh;
+        padding: 20vw 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2vh;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .section1 h1 {
+        font-size: 3rem;
+        line-height: 110%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .section1 p {
+        width: 100%;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .beneficios {
+        flex-direction: column;
+        padding: 8vw;
+        padding-left: 8vw;
+        gap: 4vw;
+    }
+
+    .astronauta {
+        position: static;
+        width: 50vw;
+        margin-bottom: 20px;
+        filter: none;
+    }
+
+    .beneficios img {
+        width: 70vw;
+    }
+
+    .texto {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .texto h2 {
+        font-size: 1.6rem;
+    }
+
+    .texto p {
+        font-size: 1rem;
+    }
+    .section2 .fases {
+        height: auto;
+        padding: 10vw 5vw;
+        background-position: center;
+        gap: 4vh;
+    }
+
+    .section2 .fases h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .section2 .fases ul {
+        flex-direction: column;
+        gap: 4vh;
+        align-items: center;
+    }
+
+    .section2 .fases ul li {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .fases ul li h2 {
+        font-size: 4rem;
+    }
+
+    .fases ul li p {
+        font-size: 1rem;
+        width: 80%;
+    }
+    .section2 .privacao {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .privacao .right img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .left {
+        padding: 5vw;
+    }
+
+    .left h1 {
+        font-size: 8vw;
+        text-align: center;
+    }
+
+    .left p {
+        font-size: 4vw;
+        text-align: justify;
+    }
+
+    .left ul li {
+        font-size: 4vw;
+    }
+    .left ul{
+        width: 90%;
+        margin: 0 auto;
+
+    }
+    .bonshabitos {
+        padding: 10vw 5vw;
+        gap: 5vh;
+    }
+
+    .bonshabitos h1 {
+        font-size: 8vw;
+        text-align: center;
+    }
+
+    .bonshabitos ul {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .bonshabitos ul li {
+        font-size: 4vw;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 5vw;
+        gap: 3vh;
+    }
+
+    .left-footer {
+        padding: 0;
+        align-items: center;
+    }
+
+    .left-footer h2 {
+        font-size: 5vw;
+        margin-bottom: 1.5vh;
+    }
+
+    .left-footer ul {
+        justify-content: center;
+        gap: 5vw;
+    }
+
+    .right-footer {
+        flex-direction: column;
+        gap: 1vh;
+        padding: 0;
+    }
+
+    .right-footer img {
+        width: 8vw;
+    }
+
+    .right-footer p {
+        font-size: 3vw;
+    }
+}

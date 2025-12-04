@@ -175,16 +175,90 @@ footer {
   display: flex;
   gap: 25px;
 }
+.dropdown{
+    display: none;
+}
+@media (max-width: 768px) {
 
-@media (max-width: 600px) {
+  header {
+        height: 60px;
+        padding: 10px 20px;
+    }
 
-  header .logo img {
-    width: 8vw;
-  }
+    header .logo img {
+        width: 30px;
+    }
 
-  nav ul li a {
-    font-size: 4vw;
-  }
+    header .logo p {
+        font-size: 5vw;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .dropdown {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 120px;
+    }
+    details {
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    summary {
+        list-style: none;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    summary::after {
+        content: "▼";
+        float: right;
+        transition: transform 0.2s;
+        font-size: 12px;
+        opacity: 0.7;
+    }
+
+    details[open] summary::after {
+        transform: rotate(-180deg);
+    }
+
+    .menu {
+        margin-top: 220px;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 15px;
+        gap: 10px;
+        border-radius: 6px;
+        animation: fade 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .menu a {
+        color: #02193B;
+        font-weight: 600;
+        padding: 8px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu a:last-child {
+        border-bottom: none;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; transform: translateY(-5px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
 
   #theme-toggle {
     font-size: 8vw;
@@ -196,6 +270,7 @@ footer {
 
   .quest h1 {
     font-size: 28px;
+    margin-bottom: 1rem;
   }
 
   form {
@@ -214,13 +289,39 @@ footer {
     font-size: 16px;
     padding: 14px;
   }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 5vw;
+        gap: 3vh;
+    }
 
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
+    .left-footer {
+        padding: 0;
+        align-items: center;
+    }
 
-  .right-footer img {
-    width: 80px;
-  }
+    .left-footer h2 {
+        font-size: 5vw;
+        margin-bottom: 1.5vh;
+    }
+
+    .left-footer ul {
+        justify-content: center;
+        gap: 5vw;
+    }
+
+    .right-footer {
+        flex-direction: column;
+        gap: 1vh;
+        padding: 0;
+    }
+
+    .right-footer img {
+        width: 8vw;
+    }
+
+    .right-footer p {
+        font-size: 3vw;
+    }
 }
